@@ -1,0 +1,12 @@
+node_modules/
+dist/
+build/
+.env
+.env.local
+data/
+uploads/
+*.log
+.DS_Store
+session.md
+generate_session_doc.mjs
+download_stitch_screens.mjs

@@ -1,0 +1,332 @@
+{
+  "createTime": "2026-10-28T04:29:20.171161Z",
+  "designTheme": {
+    "bodyFont": "PLUS_JAKARTA_SANS",
+    "bodyFontFamily": "Plus Jakarta Sans",
+    "colorMode": "LIGHT",
+    "colorVariant": "FIDELITY",
+    "customColor": "#4338ca",
+    "designMd": "---\nname: Campus Auction Design System\ncolors:\n  surface: '#f8f9ff'\n  surface-dim: '#cbdbf5'\n  surface-bright: '#f8f9ff'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#eff4ff'\n  surface-container: '#e5eeff'\n  surface-container-high: '#dce9ff'\n  surface-container-highest: '#d3e4fe'\n  on-surface: '#0b1c30'\n  on-surface-variant: '#464554'\n  inverse-surface: '#213145'\n  inverse-on-surface: '#eaf1ff'\n  outline: '#777586'\n  outline-variant: '#c7c4d7'\n  surface-tint: '#5148d7'\n  primary: '#2a14b4'\n  on-primary: '#ffffff'\n  primary-container: '#4338ca'\n  on-primary-container: '#c1beff'\n  inverse-primary: '#c3c0ff'\n  secondary: '#565e74'\n  on-secondary: '#ffffff'\n  secondary-container: '#dae2fd'\n  on-secondary-container: '#5c647a'\n  tertiary: '#00442d'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#005e40'\n  on-tertiary-container: '#66daa8'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e3dfff'\n  primary-fixed-dim: '#c3c0ff'\n  on-primary-fixed: '#100069'\n  on-primary-fixed-variant: '#372abf'\n  secondary-fixed: '#dae2fd'\n  secondary-fixed-dim: '#bec6e0'\n  on-secondary-fixed: '#131b2e'\n  on-secondary-fixed-variant: '#3f465c'\n  tertiary-fixed: '#85f8c4'\n  tertiary-fixed-dim: '#68dba9'\n  on-tertiary-fixed: '#002114'\n  on-tertiary-fixed-variant: '#005137'\n  background: '#f8f9ff'\n  on-background: '#0b1c30'\n  surface-variant: '#d3e4fe'\ntypography:\n  display-lg:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 44px\n    fontWeight: '800'\n    lineHeight: 52px\n    letterSpacing: -0.03em\n  display-lg-mobile:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 32px\n    fontWeight: '800'\n    lineHeight: 38px\n    letterSpacing: -0.02em\n  headline-xl:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: 40px\n    letterSpacing: -0.02em\n  headline-xl-mobile:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 26px\n    fontWeight: '700'\n    lineHeight: 32px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 24px\n    fontWeight: '700'\n    lineHeight: 32px\n    letterSpacing: -0.02em\n  headline-md:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 20px\n    fontWeight: '600'\n    lineHeight: 28px\n    letterSpacing: -0.01em\n  headline-sm:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 16px\n    fontWeight: '600'\n    lineHeight: 24px\n    letterSpacing: 0em\n  body-lg:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 15px\n    fontWeight: '400'\n    lineHeight: 22px\n  body-sm:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 13px\n    fontWeight: '400'\n    lineHeight: 18px\n  bid-numeral-lg:\n    fontFamily: JetBrains Mono\n    fontSize: 28px\n    fontWeight: '700'\n    lineHeight: 32px\n    letterSpacing: -0.02em\n  bid-numeral-md:\n    fontFamily: JetBrains Mono\n    fontSize: 18px\n    fontWeight: '600'\n    lineHeight: 22px\n    letterSpacing: -0.01em\n  timer-display:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.02em\n  label-caps:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 11px\n    fontWeight: '700'\n    lineHeight: 14px\n    letterSpacing: 0.06em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  gutter: 1.25rem\n  gutter-desktop: 2rem\n  margin: 1rem\n  margin-desktop: 3rem\n  space-xs: 0.25rem\n  space-sm: 0.5rem\n  space-md: 1rem\n  space-lg: 1.5rem\n  space-xl: 2.5rem\n---\n\n## Brand & Style\nThe design system establishes an academic yet sharply contemporary marketplace aesthetic tailored for university ecosystems. Balancing the institutional dignity of collegiate heritage with the swift utility of a live bidding engine, the interface avoids speculative crypto aesthetics, gimmicky gamification, or dense generic enterprise software patterns. \n\nThe emotional signature is grounded, transparent, and dignified. It evokes the feeling of an exclusive, verified campus guild: high trust between graduating seniors passing down curated essentials (dorm furniture, lab instruments, engineering kits, cycles, rare textbooks) and incoming juniors seeking quality and provenance. Visual hierarchy prioritizes clarity of listing condition, instant campus verification status, unambiguous countdown timers, and friction-free bidding increments.\n\n## Colors\nThe palette is rooted in classic academic contrast combined with high-performance transactional utility:\n\n- **Primary Action (Electric Indigo / Cobalt - `#4338CA` & `#4F46E5`):** Reserved for core high-intent actions—submitting bids, quick increment toggles, listing publication, and primary CTA buttons.\n- **Secondary / Headings (Collegiate Deep Navy - `#0F172A` & `#1E293B`):** Establishes typographic authority, high contrast reading, and institutional gravity without the harshness of pure black.\n- **Tertiary / Success & Leading Bid (Muted Emerald - `#059669` & `#10B981`):** Represents high bidder status, university-verified student ID badges, cleared inspection checks, and finalized sales.\n- **Warning & Urgency (Warm Amber / Ochre - `#D97706` & `#F59E0B`):** Signifies outbid alerts, reserve price thresholds nearing expiration, and auctions closing within the final 15 minutes.\n- **Danger & Termination (Crisp Crimson - `#DC2626`):** Highlights cancelled listings, retracted flags, or immediate dropouts.\n- **Surfaces & Neutral Foundation:** The canvas rests on an inviting warm parchment-tinted off-white (`#F8F9FA`), cards anchor onto pure optical white (`#FFFFFF`), separated cleanly by slate dividers (`#E2E8F0`) and subtle neutral captions (`#64748B`).\n\n## Typography\nTypographic rhythm combines the welcoming geometric precision of **Plus Jakarta Sans** for textual narrative with the surgical precision of **JetBrains Mono** for numerical values.\n\n- **Editorial Headings & Body:** Set in Plus Jakarta Sans with snug tracking on headings to lend authoritative, contemporary presence. Body copy focuses on optimal legibility during rapid reading of item provenance, condition reports, and pickup terms.\n- **Monospaced Numerical Precision:** JetBrains Mono is strictly designated for transactional data: live currency amounts (₹), countdown timers (`02:14:59`), minimum bid step increments (`+₹250`), and batch/hall identification tags. Tabular lining figures prevent layout jitter during real-time web-socket updates.\n\n## Layout & Spacing\nThe layout adheres to a 12-column responsive fluid grid on desktop (max width 1280px) and a single-to-dual column flow on mobile breakpoints.\n\n- **Desktop (>= 1024px):** 12-column grid, 2rem (`32px`) gutters, and 3rem (`48px`) outer margin. Split-screen item detail views allocate 7 columns to multi-angle gallery and item authentication notes, and 5 sticky columns to the live bidding ladder and countdown panel.\n- **Tablet (768px - 1023px):** 8-column grid with 1.5rem gutters. Product listings reflow to 2-column card arrays.\n- **Mobile (< 768px):** 4-column flow with 1rem margins and 1rem gutters. Sticky bottom bidding bar fixed above the native viewport safe zone to facilitate single-thumb incremental bids.\n\n## Elevation & Depth\nElevation emphasizes tactile restraint rather than excessive flotation, maintaining academic sobriety:\n\n- **Base Layer (Surface Level 0):** Parchment-toned canvas (`#F8F9FA`).\n- **Surface Layer (Surface Level 1):** Clean white (`#FFFFFF`) card bodies framed with a continuous 1px structural stroke in subtle slate (`#E2E8F0`). Flat at rest.\n- **Hover / Interactive Card (Surface Level 2):** Subtle ambient depth applied strictly on interactive listing cards via `0px 4px 12px -2px rgba(15, 23, 42, 0.06), 0px 2px 6px -2px rgba(15, 23, 42, 0.04)`.\n- **Active Sticky Bidding Rails / Floating Modals (Surface Level 3):** Higher diffuse boundary using `0px 12px 32px -4px rgba(15, 23, 42, 0.12), 0px 4px 12px -2px rgba(15, 23, 42, 0.04)` combined with a razor-thin top perimeter line (`border-t: 1px solid #E2E8F0`) to ensure legibility above underlying scrolling feeds.\n- **No Heavy Colored Shadows:** Never apply saturated color-tinted glow shadows to action buttons; depth is communicated through strict outline boundaries and crisp ambient occlusion.\n\n## Shapes\nThe design system adopts a disciplined **Rounded** profile (`roundedness: 2`), projecting modern friendliness while avoiding toy-like pill distortion on rectangular structural components.\n\n- Standard inputs, buttons, auction item cards, and notification panels feature an 8px (`0.5rem`) corner radius.\n- Large modal sheets, media display frames, and bid history containers scale to 16px (`1rem`).\n- Strict pill exceptions (`9999px`) are reserved exclusively for contextual micro-badges: verified student status (`Verified '24`), item condition tags (`Mint`, `Fair`), and countdown urgency pills (`12m left`).\n\n## Components\n\n### Buttons\n- **Primary Bid Button:** Rich Electric Indigo (`#4338CA`), white typography, 8px border radius, medium vertical padding (`10px 20px`), font-weight 600. Active states drop to `#3730A3`.\n- **Quick Increment Stepper (+₹100, +₹500):** Ghost slate surface (`#F1F5F9`), bordered in `#E2E8F0`, deep navy text (`#0F172A`). Monospaced value indicator with an energetic hover state shifting to `#EEF2FF` with `#4338CA` border.\n- **Secondary / Ghost:** Transparent background with 1px slate outline (`#CBD5E1`), text navy (`#1E293B`).\n\n### Auction Item Cards\n- Surface pure white (`#FFFFFF`), 1px outline (`#E2E8F0`).\n- Card layout encapsulates a 4:3 high-resolution aspect-ratio photo frame, a live sticky-styled pill in the top corner (displaying time left via JetBrains Mono), followed by title, academic department tag, current highest bid with large ₹ monospaced numeral, and current leader indicator.\n\n### Badges & Verification Chips\n- **Campus Verified Badge:** Emerald soft background (`#ECFDF5`), emerald text (`#059669`), 1px border (`#A7F3D0`), displaying an institutional shield or mortarboard micro-icon.\n- **Urgency Pill:** Ochre soft background (`#FFFBEB`), amber text (`#D97706`), 1px border (`#FDE68A`).\n\n### Live Bidding Ladder & History Log\n- Compact list rows alternating with faint zebra tinting (`#FAFAFA` and `#FFFFFF`).\n- Left side: Bidder identity pseudonymized to campus credentials (e.g., `Senior '24 (Mech)` or `Junior '26 (CS)`).\n- Right side: Monospaced timestamp and bid amount in JetBrains Mono. Outbid records struck through in subtle slate (`#94A3B8`).\n\n### Input Fields & Steppers\n- Clean white inputs with an inset slate border (`#CBD5E1`), transitioning to a crisp 2px Indigo ring (`#4338CA`) on focus without gross glow halos.\n- Indian Rupee currency sign (₹) locked as an immutable, non-selectable gray affix prefix inside the container.",
+    "font": "PLUS_JAKARTA_SANS",
+    "headlineFont": "PLUS_JAKARTA_SANS",
+    "headlineFontFamily": "Plus Jakarta Sans",
+    "labelFont": "JETBRAINS_MONO",
+    "labelFontFamily": "JetBrains Mono",
+    "namedColors": {
+      "background": "#f8f9ff",
+      "error": "#ba1a1a",
+      "error_container": "#ffdad6",
+      "inverse_on_surface": "#eaf1ff",
+      "inverse_primary": "#c3c0ff",
+      "inverse_surface": "#213145",
+      "on_background": "#0b1c30",
+      "on_error": "#ffffff",
+      "on_error_container": "#93000a",
+      "on_primary": "#ffffff",
+      "on_primary_container": "#c1beff",
+      "on_primary_fixed": "#100069",
+      "on_primary_fixed_variant": "#372abf",
+      "on_secondary": "#ffffff",
+      "on_secondary_container": "#5c647a",
+      "on_secondary_fixed": "#131b2e",
+      "on_secondary_fixed_variant": "#3f465c",
+      "on_surface": "#0b1c30",
+      "on_surface_variant": "#464554",
+      "on_tertiary": "#ffffff",
+      "on_tertiary_container": "#66daa8",
+      "on_tertiary_fixed": "#002114",
+      "on_tertiary_fixed_variant": "#005137",
+      "outline": "#777586",
+      "outline_variant": "#c7c4d7",
+      "primary": "#2a14b4",
+      "primary_container": "#4338ca",
+      "primary_fixed": "#e3dfff",
+      "primary_fixed_dim": "#c3c0ff",
+      "secondary": "#565e74",
+      "secondary_container": "#dae2fd",
+      "secondary_fixed": "#dae2fd",
+      "secondary_fixed_dim": "#bec6e0",
+      "surface": "#f8f9ff",
+      "surface_bright": "#f8f9ff",
+      "surface_container": "#e5eeff",
+      "surface_container_high": "#dce9ff",
+      "surface_container_highest": "#d3e4fe",
+      "surface_container_low": "#eff4ff",
+      "surface_container_lowest": "#ffffff",
+      "surface_dim": "#cbdbf5",
+      "surface_tint": "#5148d7",
+      "surface_variant": "#d3e4fe",
+      "tertiary": "#00442d",
+      "tertiary_container": "#005e40",
+      "tertiary_fixed": "#85f8c4",
+      "tertiary_fixed_dim": "#68dba9"
+    },
+    "overrideNeutralColor": "#64748b",
+    "overridePrimaryColor": "#4338ca",
+    "overrideSecondaryColor": "#0f172a",
+    "overrideTertiaryColor": "#059669",
+    "roundness": "ROUND_EIGHT",
+    "spacing": {
+      "gutter": "1.25rem",
+      "gutter-desktop": "2rem",
+      "margin": "1rem",
+      "margin-desktop": "3rem",
+      "space-lg": "1.5rem",
+      "space-md": "1rem",
+      "space-sm": "0.5rem",
+      "space-xl": "2.5rem",
+      "space-xs": "0.25rem"
+    },
+    "spacingScale": 2,
+    "typography": {
+      "bid-numeral-lg": {
+        "fontFamily": "JetBrains Mono",
+        "fontSize": "28px",
+        "fontWeight": "700",
+        "letterSpacing": "-0.02em",
+        "lineHeight": "32px"
+      },
+      "bid-numeral-md": {
+        "fontFamily": "JetBrains Mono",
+        "fontSize": "18px",
+        "fontWeight": "600",
+        "letterSpacing": "-0.01em",
+        "lineHeight": "22px"
+      },
+      "body-lg": {
+        "fontFamily": "Plus Jakarta Sans",
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "lineHeight": "28px"
+      },
+      "body-md": {
+        "fontFamily": "Plus Jakarta Sans",
+        "fontSize": "15px",
+        "fontWeight": "400",
+        "lineHeight": "22px"
+      },
+      "body-sm": {
+        "fontFamily": "Plus Jakarta Sans",
+        "fontSize": "13px",
+        "fontWeight": "400",
+        "lineHeight": "18px"
+      },
+      "display-lg": {
+        "fontFamily": "Plus Jakarta Sans",
+        "fontSize": "44px",
+        "fontWeight": "800",
+        "letterSpacing": "-0.03em",
+        "lineHeight": "52px"
+      },
+      "display-lg-mobile": {
+        "fontFamily": "Plus Jakarta Sans",
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "letterSpacing": "-0.02em",
+        "lineHeight": "38px"
+      },
+      "headline-lg": {
+        "fontFamily": "Plus Jakarta Sans",
+        "fontSize": "24px",
+        "fontWeight": "700",
+        "letterSpacing": "-0.02em",
+        "lineHeight": "32px"
+      },
+      "headline-md": {
+        "fontFamily": "Plus Jakarta Sans",
+        "fontSize": "20px",
+        "fontWeight": "600",
+        "letterSpacing": "-0.01em",
+        "lineHeight": "28px"
+      },
+      "headline-sm": {
+        "fontFamily": "Plus Jakarta Sans",
+        "fontSize": "16px",
+        "fontWeight": "600",
+        "letterSpacing": "0em",
+        "lineHeight": "24px"
+      },
+      "headline-xl": {
+        "fontFamily": "Plus Jakarta Sans",
+        "fontSize": "32px",
+        "fontWeight": "700",
+        "letterSpacing": "-0.02em",
+        "lineHeight": "40px"
+      },
+      "headline-xl-mobile": {
+        "fontFamily": "Plus Jakarta Sans",
+        "fontSize": "26px",
+        "fontWeight": "700",
+        "letterSpacing": "-0.02em",
+        "lineHeight": "32px"
+      },
+      "label-caps": {
+        "fontFamily": "Plus Jakarta Sans",
+        "fontSize": "11px",
+        "fontWeight": "700",
+        "letterSpacing": "0.06em",
+        "lineHeight": "14px"
+      },
+      "timer-display": {
+        "fontFamily": "JetBrains Mono",
+        "fontSize": "14px",
+        "fontWeight": "600",
+        "letterSpacing": "0.02em",
+        "lineHeight": "16px"
+      }
+    }
+  },
+  "deviceType": "DESKTOP",
+  "metadata": {
+    "userRole": "OWNER"
+  },
+  "name": "projects/15375059538578470502",
+  "origin": "STITCH",
+  "projectType": "TEXT_TO_UI_PRO",
+  "screenInstances": [
+    {
+      "height": 1942,
+      "id": "0a3d4487f2b046a9b8b002e3b25566a9",
+      "label": "My Bids - Campus Auction",
+      "sourceScreen": "projects/15375059538578470502/screens/0a3d4487f2b046a9b8b002e3b25566a9",
+      "width": 1280,
+      "x": 1344,
+      "y": 2401
+    },
+    {
+      "height": 1441,
+      "id": "23acf025c9434a149faa0a58fa117966",
+      "label": "My Watchlist - Campus Auction",
+      "sourceScreen": "projects/15375059538578470502/screens/23acf025c9434a149faa0a58fa117966",
+      "width": 1280,
+      "x": 2688,
+      "y": 2401
+    },
+    {
+      "height": 1916,
+      "id": "426231d729514fc5a7eb735ddca739d5",
+      "label": "Saved Searches - Campus Auction",
+      "sourceScreen": "projects/15375059538578470502/screens/426231d729514fc5a7eb735ddca739d5",
+      "width": 1280,
+      "x": 4032,
+      "y": 2401
+    },
+    {
+      "height": 1750,
+      "id": "5fc38aed366e4d9cb2984eb90283a1fa",
+      "label": "Notifications - Campus Auction",
+      "sourceScreen": "projects/15375059538578470502/screens/5fc38aed366e4d9cb2984eb90283a1fa",
+      "width": 1280,
+      "x": 4032,
+      "y": 4599
+    },
+    {
+      "height": 2020,
+      "id": "6d2f265f1e684d6a940389616bca33d4",
+      "label": "Seller Decisions - Campus Auction",
+      "sourceScreen": "projects/15375059538578470502/screens/6d2f265f1e684d6a940389616bca33d4",
+      "width": 1280,
+      "y": 4599
+    },
+    {
+      "height": 2822,
+      "id": "8e501d6a8359449fa531882d1989438f",
+      "label": "Create Auction Listing - Campus Auction",
+      "sourceScreen": "projects/15375059538578470502/screens/8e501d6a8359449fa531882d1989438f",
+      "width": 1280,
+      "x": 1344,
+      "y": 7226
+    },
+    {
+      "height": 1992,
+      "id": "971d8b22c0a84c738865c101510a1aeb",
+      "label": "Questions & Answers - Campus Auction",
+      "sourceScreen": "projects/15375059538578470502/screens/971d8b22c0a84c738865c101510a1aeb",
+      "width": 1280,
+      "x": 2688,
+      "y": 4599
+    },
+    {
+      "height": 2371,
+      "id": "999c388fd6a04c8689cb751f6291b429",
+      "label": "Profile & Trust - Campus Auction",
+      "sourceScreen": "projects/15375059538578470502/screens/999c388fd6a04c8689cb751f6291b429",
+      "width": 1280,
+      "x": 5376,
+      "y": 4599
+    },
+    {
+      "height": 2247,
+      "id": "ab767134411a447f9cc4a3d0f708f51f",
+      "label": "My Listings - Campus Auction",
+      "sourceScreen": "projects/15375059538578470502/screens/ab767134411a447f9cc4a3d0f708f51f",
+      "width": 1280,
+      "x": 1344,
+      "y": 4599
+    },
+    {
+      "height": 540,
+      "id": "assets_eaf0b5be117443c3b54fb90476821253",
+      "sourceAsset": "assets/eaf0b5be117443c3b54fb90476821253",
+      "type": "DESIGN_SYSTEM_INSTANCE",
+      "width": 960
+    },
+    {
+      "height": 1337,
+      "id": "bd82e90d6fc64034b59645f133a19f85",
+      "label": "Campus Sign In - Campus Auction",
+      "sourceScreen": "projects/15375059538578470502/screens/bd82e90d6fc64034b59645f133a19f85",
+      "width": 1280,
+      "y": 2401
+    },
+    {
+      "height": 2308,
+      "id": "c50f69f2f73a45ab9b59d31aca036a25",
+      "label": "Admin Moderation - Campus Auction",
+      "sourceScreen": "projects/15375059538578470502/screens/c50f69f2f73a45ab9b59d31aca036a25",
+      "width": 1280,
+      "x": 6720,
+      "y": 4599
+    },
+    {
+      "height": 2145,
+      "id": "c79e2ca2d17a4b7b93aa02fca418ab29",
+      "label": "Live Auction: Hero Sprint Bicycle - Campus Auction",
+      "sourceScreen": "projects/15375059538578470502/screens/c79e2ca2d17a4b7b93aa02fca418ab29",
+      "width": 1280,
+      "x": 1024
+    },
+    {
+      "height": 1251,
+      "id": "dc494f7846e240d98407430d009eb903",
+      "label": "AI Assistant - Campus Auction",
+      "sourceScreen": "projects/15375059538578470502/screens/dc494f7846e240d98407430d009eb903",
+      "width": 1280,
+      "x": 5376,
+      "y": 2401
+    },
+    {
+      "height": 2079,
+      "id": "ea6b131093f94e0b921be6c77638324b",
+      "label": "Discover Marketplace - Campus Auction",
+      "sourceScreen": "projects/15375059538578470502/screens/ea6b131093f94e0b921be6c77638324b",
+      "width": 1280,
+      "x": 2368
+    },
+    {
+      "height": 1390,
+      "id": "fc99d6f30c6343d1804c2b154464885f",
+      "label": "Place Bid Confirmation - Campus Auction",
+      "sourceScreen": "projects/15375059538578470502/screens/fc99d6f30c6343d1804c2b154464885f",
+      "width": 1280,
+      "y": 7226
+    }
+  ],
+  "thumbnailScreenshot": {
+    "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1Vv9IMyid80WxVROIm30WX0Ko1xrbdyeFSlf55ov52vgayWUBU0bxWva_ZDCgbTckeRK3zsWS1ypCosfIdNvz_2HcoFmq-3ctqrNsRhsFCAg2luLKkWlFH64I5c5pzm5Tn8NmYHnI7Qzh9oSczSFuHUz3cXNpSsLHzyev7ml6BM6tAD4NhvwQY4_siRvsDN-_uY2aCUkQZvF-DljHUUhDpd2f-msi9ahKNeL3Ymnv8Dqw",
+    "name": "projects/15375059538578470502/screens/ea6b131093f94e0b921be6c77638324b/fileEntries/screenshot"
+  },
+  "title": "Campus Auction Platform",
+  "updateTime": "2026-10-28T05:23:22.251380Z",
+  "visibility": "PUBLIC"
+}
