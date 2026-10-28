@@ -34,11 +34,11 @@ export const api = {
     return data.user;
   },
 
-  async login(credential: string, password?: string): Promise<{ user: User; token: string }> {
+  async login(credential: string, password?: string, expectedRole?: string): Promise<{ user: User; token: string }> {
     const res = await fetch(`${API_BASE}/auth/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ credential, password }),
+      body: JSON.stringify({ credential, password, expectedRole }),
     });
     const data = await res.json();
     if (!res.ok) throw new Error(data.error || 'Login failed');

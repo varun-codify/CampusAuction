@@ -75,20 +75,50 @@ export const CreateAuctionPage: React.FC = () => {
         </p>
       </div>
 
+      {user?.role === 'buyer' && (
+        <div className="bg-amber-50 border border-amber-200 text-amber-950 p-6 rounded-3xl flex flex-col sm:flex-row items-center justify-between gap-5 shadow-sm">
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 rounded-2xl bg-amber-200 text-amber-900 flex items-center justify-center shrink-0">
+              <span className="material-symbols-outlined text-2xl">sell</span>
+            </div>
+            <div>
+              <p className="font-extrabold text-sm text-slate-900">Campus Seller Account Required</p>
+              <p className="text-xs text-slate-600 mt-0.5">
+                You are currently signed in as a <span className="font-bold text-indigo-700">Campus Buyer</span>. To maintain marketplace integrity, auction listings can only be published by registered Seller accounts.
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center gap-2 shrink-0">
+            <Link
+              to="/login?role=seller"
+              className="px-4 py-2.5 bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold rounded-xl transition-all shadow-sm"
+            >
+              Sign In as Seller
+            </Link>
+            <Link
+              to="/"
+              className="px-4 py-2.5 bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 text-xs font-bold rounded-xl transition-all"
+            >
+              Marketplace
+            </Link>
+          </div>
+        </div>
+      )}
+
       {!user && (
         <div className="bg-amber-50 border border-amber-200 text-amber-900 p-4 rounded-2xl flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <span className="material-symbols-outlined text-amber-600 text-2xl">lock</span>
             <div>
-              <p className="font-bold text-xs">Campus Authentication Required</p>
-              <p className="text-xs text-amber-700">Please sign in to list items on the verified campus marketplace.</p>
+              <p className="font-bold text-xs">Campus Seller Authentication Required</p>
+              <p className="text-xs text-amber-700">Please sign in with a verified Seller account to list items.</p>
             </div>
           </div>
           <Link
-            to="/login"
-            className="px-4 py-2 bg-primary hover:bg-primary-hover text-white text-xs font-bold rounded-xl transition-all shadow-sm shrink-0"
+            to="/login?role=seller"
+            className="px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold rounded-xl transition-all shadow-sm shrink-0"
           >
-            Sign In Now
+            Seller Sign In
           </Link>
         </div>
       )}

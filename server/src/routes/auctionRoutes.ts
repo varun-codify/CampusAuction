@@ -196,6 +196,15 @@ router.post('/', authMiddleware, async (req: AuthRequest, res: Response) => {
   try {
     const db = await getDb();
     const user = req.user!;
+
+    // Role restriction: Only Campus Sellers (or Admin) can list items
+    if (user.role === 'buyer') {
+      return res.status(403).json({
+        error: 'Forbidden: Campus Buyer accounts cannot publish auction listings. Please sign in with or register a Campus Seller account.',
+        role: user.role,
+      });
+    }
+
     const {
       title,
       description,
@@ -313,6 +322,15 @@ router.post('/', authMiddleware, async (req: AuthRequest, res: Response) => {
 router.post('/:id/bids', authMiddleware, async (req: AuthRequest, res: Response) => {
   try {
     const user = req.user!;
+
+    // Role restriction: Sellers cannot place bids on any auctions
+    if (user.role === 'seller') {
+      return res.status(403).json({
+        error: 'Forbidden: Campus Seller accounts are prohibited from bidding to eliminate conflicts of interest and prevent shill bidding. Please use a Campus Buyer account to participate.',
+        role: user.role,
+      });
+    }
+
     const { amount, maxBudget } = req.body;
 
     if (!amount || Number(amount) <= 0) {
@@ -377,6 +395,9 @@ router.post('/:id/seller-decision', authMiddleware, async (req: AuthRequest, res
     if (auctionRows.length === 0) return res.status(404).json({ error: 'Auction not found' });
 
     const auction = auctionRows[0];
+    if (user.role === 'buyer') {
+      return res.status(403).json({ error: 'Forbidden: Campus Buyer accounts cannot approve or reject seller decisions.' });
+    }
     if (auction.sellerId !== user.id && user.role !== 'admin') {
       return res.status(403).json({ error: 'Only the seller can approve or reject this auction outcome.' });
     }

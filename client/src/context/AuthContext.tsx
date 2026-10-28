@@ -7,7 +7,7 @@ interface AuthContextType {
   loading: boolean;
   unreadCount: number;
   testAccounts: User[];
-  login: (credential: string, password?: string) => Promise<User>;
+  login: (credential: string, password?: string, expectedRole?: string) => Promise<User>;
   register: (payload: {
     name: string;
     email: string;
@@ -71,8 +71,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   };
 
-  const login = async (credential: string, password?: string): Promise<User> => {
-    const res = await api.login(credential, password);
+  const login = async (credential: string, password?: string, expectedRole?: string): Promise<User> => {
+    const res = await api.login(credential, password, expectedRole);
     localStorage.setItem('campus_bid_token', res.token);
     localStorage.setItem('campus_bid_user_id', res.user.id);
     setUser(res.user);

@@ -11,6 +11,10 @@ router.get('/bids', authMiddleware, async (req: AuthRequest, res: Response) => {
     const db = await getDb();
     const user = req.user!;
 
+    if (user.role === 'seller') {
+      return res.json({ bids: [], message: 'Seller accounts do not participate in bidding.' });
+    }
+
     // Find all distinct auctions this student has bid on
     const userBids = await db
       .select({
@@ -118,6 +122,10 @@ router.get('/seller-decisions', authMiddleware, async (req: AuthRequest, res: Re
   try {
     const db = await getDb();
     const user = req.user!;
+
+    if (user.role === 'buyer') {
+      return res.status(403).json({ error: 'Forbidden: Seller Decisions are only accessible to Campus Sellers.' });
+    }
 
     const decisions = await db
       .select({

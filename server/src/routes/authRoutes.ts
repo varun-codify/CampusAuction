@@ -66,7 +66,7 @@ router.post('/register', async (req, res) => {
       phone: phone?.trim() || null,
       isVerified: true,
       trustScore: 100, // Starts at 100 for clean slate
-      role: role === 'admin' ? 'admin' : 'student',
+      role: role === 'admin' ? 'admin' : (role === 'seller' ? 'seller' : 'buyer'),
       avatarUrl: `https://images.unsplash.com/photo-${1500000000000 + Math.floor(Math.random() * 50000000)}?auto=format&fit=crop&q=80&w=256`,
       passwordHash,
       createdAt: new Date(),
@@ -117,6 +117,19 @@ router.post('/login', async (req, res) => {
     }
 
     const user = users[0];
+
+    // Check if login request specified a portal role (buyer vs seller)
+    const { expectedRole } = req.body;
+    if (expectedRole && expectedRole !== 'any' && user.role !== 'admin' && user.role !== expectedRole) {
+      const isSeller = user.role === 'seller';
+      const actualLabel = isSeller ? 'Campus Seller' : 'Campus Buyer';
+      const expectedLabel = expectedRole === 'seller' ? 'Campus Seller' : 'Campus Buyer';
+      return res.status(403).json({
+        error: `Portal Mismatch: "${user.name}" is registered as a ${actualLabel}. Please use the ${actualLabel} login tab or switch portals.`,
+        userRole: user.role,
+        expectedRole,
+      });
+    }
 
     // If password provided and user has passwordHash, verify it
     if (password && user.passwordHash) {

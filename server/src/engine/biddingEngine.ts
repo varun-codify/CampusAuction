@@ -52,7 +52,16 @@ export async function placeBid(params: PlaceBidParams): Promise<PlaceBidResult> 
       throw new Error('Auction has already closed. Late bids cannot be accepted.');
     }
 
-    // 4. Seller cannot bid on own listing
+    // 4. Role check: sellers cannot place bids, and seller cannot bid on own listing
+    const bidderRows = await tx
+      .select({ role: schema.users.role, name: schema.users.name })
+      .from(schema.users)
+      .where(eq(schema.users.id, bidderId));
+
+    if (bidderRows.length > 0 && bidderRows[0].role === 'seller') {
+      throw new Error('Campus Seller accounts are prohibited from bidding. Bidding is reserved for Campus Buyers.');
+    }
+
     if (auction.sellerId === bidderId) {
       throw new Error('Sellers are prohibited from bidding on their own listings.');
     }

@@ -492,7 +492,7 @@ export const AuctionDetailsPage: React.FC = () => {
             </div>
 
             {/* Bidding Controls Form */}
-            {!isClosed && !isSeller ? (
+            {!isClosed && !isSeller && user?.role !== 'seller' ? (
               <div className="flex flex-col gap-3">
                 <div className="flex items-center justify-between text-xs">
                   <span className="text-slate-500">Your Bid Amount (₹):</span>
@@ -550,18 +550,34 @@ export const AuctionDetailsPage: React.FC = () => {
                   </button>
                 ) : (
                   <Link
-                    to="/login"
+                    to="/login?role=buyer"
                     className="w-full mt-2 py-3.5 bg-primary hover:bg-primary-hover text-white font-bold text-sm rounded-xl shadow-md transition-all flex items-center justify-center gap-2 text-center"
                   >
                     <span className="material-symbols-outlined text-lg">lock</span>
-                    <span>Sign In to Place Bid (₹{bidAmount.toLocaleString('en-IN')})</span>
+                    <span>Sign In as Buyer to Place Bid (₹{bidAmount.toLocaleString('en-IN')})</span>
                   </Link>
                 )}
               </div>
-            ) : isSeller ? (
-              <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-900">
-                <span className="font-bold block mb-1">Your Listing:</span>
-                Sellers cannot bid on their own listings. Monitor incoming bids in real-time below.
+            ) : user?.role === 'seller' || isSeller ? (
+              <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-900 flex flex-col gap-2">
+                <div className="flex items-center gap-1.5 font-bold">
+                  <span className="material-symbols-outlined text-base text-amber-700">sell</span>
+                  <span>Campus Seller Mode Active</span>
+                </div>
+                <p className="text-[11px] text-slate-600 leading-relaxed">
+                  {isSeller
+                    ? 'You are the seller of this listing. Track incoming bids on the ledger below or review provisional outcomes in Seller Decisions.'
+                    : 'Campus Sellers are restricted from bidding on auctions to eliminate conflicts of interest and prevent shill bidding.'}
+                </p>
+                {!isSeller && (
+                  <Link
+                    to="/login?role=buyer"
+                    className="self-start text-[11px] font-bold text-amber-900 bg-white border border-amber-300 px-3 py-1.5 rounded-lg hover:bg-amber-100 transition-colors flex items-center gap-1 mt-1"
+                  >
+                    <span>Switch to Campus Buyer Portal</span>
+                    <span className="material-symbols-outlined text-xs">arrow_forward</span>
+                  </Link>
+                )}
               </div>
             ) : (
               <div className="bg-slate-100 rounded-xl p-4 text-xs text-slate-700 text-center font-medium">

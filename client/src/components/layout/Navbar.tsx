@@ -75,14 +75,32 @@ export const Navbar: React.FC = () => {
           )}
         </Link>
 
-        {/* List an Item Action Button */}
-        <Link
-          to="/create-listing"
-          className="hidden sm:flex items-center gap-1.5 bg-primary hover:bg-primary-hover text-white text-xs font-semibold px-4 py-2 rounded-lg shadow-sm transition-all"
-        >
-          <span className="material-symbols-outlined text-base">add</span>
-          <span>List an Item</span>
-        </Link>
+        {/* Role-Specific Action Button */}
+        {user?.role === 'seller' ? (
+          <Link
+            to="/create-listing"
+            className="hidden sm:flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white text-xs font-semibold px-4 py-2 rounded-lg shadow-sm transition-all"
+          >
+            <span className="material-symbols-outlined text-base">add</span>
+            <span>List an Item</span>
+          </Link>
+        ) : user?.role === 'buyer' ? (
+          <Link
+            to="/my-bids"
+            className="hidden sm:flex items-center gap-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold px-4 py-2 rounded-lg shadow-sm transition-all"
+          >
+            <span className="material-symbols-outlined text-base">pan_tool_alt</span>
+            <span>My Bids</span>
+          </Link>
+        ) : (
+          <Link
+            to="/create-listing"
+            className="hidden sm:flex items-center gap-1.5 bg-primary hover:bg-primary-hover text-white text-xs font-semibold px-4 py-2 rounded-lg shadow-sm transition-all"
+          >
+            <span className="material-symbols-outlined text-base">add</span>
+            <span>List an Item</span>
+          </Link>
+        )}
 
         {/* User Identity / Profile or Guest Controls */}
         {user ? (
@@ -97,7 +115,18 @@ export const Navbar: React.FC = () => {
                 className="w-8 h-8 rounded-full object-cover border border-slate-300"
               />
               <div className="hidden lg:flex flex-col text-left">
-                <span className="text-xs font-bold text-slate-900 leading-tight">{user.name}</span>
+                <div className="flex items-center gap-1.5">
+                  <span className="text-xs font-bold text-slate-900 leading-tight">{user.name}</span>
+                  <span className={`text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.2 rounded border ${
+                    user.role === 'seller'
+                      ? 'bg-amber-100 text-amber-800 border-amber-200'
+                      : user.role === 'buyer'
+                      ? 'bg-indigo-100 text-indigo-800 border-indigo-200'
+                      : 'bg-purple-100 text-purple-800 border-purple-200'
+                  }`}>
+                    {user.role}
+                  </span>
+                </div>
                 <span className="text-[10px] text-slate-500 font-mono">{user.studentId}</span>
               </div>
               <span className="material-symbols-outlined text-slate-400 text-sm">expand_more</span>
@@ -106,39 +135,94 @@ export const Navbar: React.FC = () => {
             {dropdownOpen && (
               <div className="absolute right-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-slate-200 py-2 z-50">
                 <div className="px-4 py-2 border-b border-slate-100">
-                  <p className="text-[11px] font-bold uppercase tracking-wider text-slate-400">Signed In As</p>
+                  <div className="flex items-center justify-between">
+                    <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Campus Account</p>
+                    <span className={`text-[9px] font-bold uppercase px-1.5 py-0.5 rounded font-mono ${
+                      user.role === 'seller' ? 'bg-amber-100 text-amber-800' : 'bg-indigo-100 text-indigo-800'
+                    }`}>
+                      {user.role === 'seller' ? 'Seller Account' : 'Buyer Account'}
+                    </span>
+                  </div>
                   <p className="text-sm font-bold text-slate-900 mt-0.5">{user.name}</p>
                   <p className="text-xs text-slate-500">{user.hall} • Trust Score: <span className="font-bold text-emerald-600">{user.trustScore}/100</span></p>
                 </div>
 
                 <div className="py-1">
-                  <Link
-                    to="/my-listings"
-                    onClick={() => setDropdownOpen(false)}
-                    className="flex items-center gap-2 px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 font-medium"
-                  >
-                    <span className="material-symbols-outlined text-base text-slate-400">inventory_2</span>
-                    <span>My Listings</span>
-                  </Link>
-                  <Link
-                    to="/my-bids"
-                    onClick={() => setDropdownOpen(false)}
-                    className="flex items-center gap-2 px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 font-medium"
-                  >
-                    <span className="material-symbols-outlined text-base text-slate-400">gavel</span>
-                    <span>My Bids</span>
-                  </Link>
+                  {user.role === 'seller' ? (
+                    <>
+                      <Link
+                        to="/my-listings"
+                        onClick={() => setDropdownOpen(false)}
+                        className="flex items-center gap-2 px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 font-medium"
+                      >
+                        <span className="material-symbols-outlined text-base text-amber-600">inventory_2</span>
+                        <span>My Listings</span>
+                      </Link>
+                      <Link
+                        to="/seller-decisions"
+                        onClick={() => setDropdownOpen(false)}
+                        className="flex items-center gap-2 px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 font-medium"
+                      >
+                        <span className="material-symbols-outlined text-base text-amber-600">fact_check</span>
+                        <span>Seller Decisions</span>
+                      </Link>
+                      <Link
+                        to="/create-listing"
+                        onClick={() => setDropdownOpen(false)}
+                        className="flex items-center gap-2 px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 font-medium"
+                      >
+                        <span className="material-symbols-outlined text-base text-amber-600">add_circle</span>
+                        <span>List New Item</span>
+                      </Link>
+                    </>
+                  ) : (
+                    <>
+                      <Link
+                        to="/my-bids"
+                        onClick={() => setDropdownOpen(false)}
+                        className="flex items-center gap-2 px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 font-medium"
+                      >
+                        <span className="material-symbols-outlined text-base text-indigo-600">pan_tool_alt</span>
+                        <span>My Bids</span>
+                      </Link>
+                      <Link
+                        to="/watchlist"
+                        onClick={() => setDropdownOpen(false)}
+                        className="flex items-center gap-2 px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 font-medium"
+                      >
+                        <span className="material-symbols-outlined text-base text-indigo-600">bookmark</span>
+                        <span>My Watchlist</span>
+                      </Link>
+                      <Link
+                        to="/saved-searches"
+                        onClick={() => setDropdownOpen(false)}
+                        className="flex items-center gap-2 px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 font-medium"
+                      >
+                        <span className="material-symbols-outlined text-base text-indigo-600">saved_search</span>
+                        <span>Saved Searches</span>
+                      </Link>
+                    </>
+                  )}
+
                   <Link
                     to="/profile"
                     onClick={() => setDropdownOpen(false)}
                     className="flex items-center gap-2 px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 font-medium"
                   >
                     <span className="material-symbols-outlined text-base text-slate-400">account_circle</span>
-                    <span>Profile &amp; Trust</span>
+                    <span>Profile &amp; Trust Score</span>
                   </Link>
                 </div>
 
                 <div className="border-t border-slate-100 pt-1">
+                  <Link
+                    to={`/login?role=${user.role === 'seller' ? 'buyer' : 'seller'}`}
+                    onClick={() => setDropdownOpen(false)}
+                    className="w-full text-left px-4 py-2 text-xs text-slate-600 hover:bg-slate-50 font-medium flex items-center justify-between"
+                  >
+                    <span>Switch to {user.role === 'seller' ? 'Buyer' : 'Seller'} Portal</span>
+                    <span className="material-symbols-outlined text-sm text-slate-400">sync_alt</span>
+                  </Link>
                   <button
                     type="button"
                     onClick={async () => {

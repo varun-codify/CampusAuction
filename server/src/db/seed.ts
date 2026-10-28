@@ -16,7 +16,7 @@ export async function seedDatabase() {
       phone: '+91 98765 43210',
       isVerified: true,
       trustScore: 98,
-      role: 'student',
+      role: 'buyer',
       avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=256'
     },
     {
@@ -29,7 +29,7 @@ export async function seedDatabase() {
       phone: '+91 98765 43211',
       isVerified: true,
       trustScore: 99,
-      role: 'student',
+      role: 'seller',
       avatarUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=256'
     },
     {
@@ -42,7 +42,7 @@ export async function seedDatabase() {
       phone: '+91 98765 43212',
       isVerified: true,
       trustScore: 95,
-      role: 'student',
+      role: 'seller',
       avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=256'
     },
     {
@@ -55,7 +55,7 @@ export async function seedDatabase() {
       phone: '+91 98765 43213',
       isVerified: true,
       trustScore: 97,
-      role: 'student',
+      role: 'buyer',
       avatarUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=256'
     },
     {

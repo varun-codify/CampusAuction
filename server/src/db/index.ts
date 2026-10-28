@@ -151,6 +151,17 @@ export async function getDb() {
   fs.mkdirSync(dataDir, { recursive: true });
   const pglite = new PGlite(dataDir);
   await pglite.exec(DDL);
+
+  try {
+    await pglite.exec(`
+      UPDATE users SET role = 'seller' WHERE id IN ('usr-vikram-23', 'usr-ananya-25') AND (role = 'student' OR role IS NULL);
+      UPDATE users SET role = 'buyer' WHERE id IN ('usr-rohan-24', 'usr-priya-26') AND (role = 'student' OR role IS NULL);
+      UPDATE users SET role = 'buyer' WHERE role = 'student';
+    `);
+  } catch (migErr) {
+    // Migration safe ignore
+  }
+
   console.log('✅ [Database] PostgreSQL (PGlite) operational with all tables and schema verified.');
   dbInstance = drizzlePglite(pglite, { schema });
   return dbInstance;
