@@ -20,6 +20,7 @@ interface AuthContextType {
   }) => Promise<User>;
   logout: () => Promise<void>;
   switchUser: (userId: string) => Promise<void>;
+  switchRole: (role: 'buyer' | 'seller') => Promise<void>;
   refreshNotifications: () => Promise<void>;
 }
 
@@ -32,6 +33,7 @@ const AuthContext = createContext<AuthContextType>({
   register: async () => { throw new Error('Not implemented'); },
   logout: async () => {},
   switchUser: async () => {},
+  switchRole: async () => {},
   refreshNotifications: async () => {},
 });
 
@@ -145,6 +147,19 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   };
 
+  const handleSwitchRole = async (role: 'buyer' | 'seller') => {
+    try {
+      const { user: updatedUser, token } = await api.switchRole(role);
+      localStorage.setItem('campus_bid_token', token);
+      localStorage.setItem('campus_bid_user_id', updatedUser.id);
+      setUser(updatedUser);
+      await refreshNotifications();
+    } catch (err) {
+      console.error('Failed to switch role:', err);
+      throw err;
+    }
+  };
+
   useEffect(() => {
     loadUser();
 
@@ -173,6 +188,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         register,
         logout,
         switchUser: handleSwitchUser,
+        switchRole: handleSwitchRole,
         refreshNotifications,
       }}
     >

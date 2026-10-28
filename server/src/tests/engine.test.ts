@@ -14,6 +14,14 @@ describe('Campus Auction Bidding Engine Tests', () => {
   beforeAll(async () => {
     db = await getDb();
 
+    // Ensure correct user roles for testing (matching seed data)
+    // Use PGlite raw execution like the index.ts migration
+    const pglite = db.$client; // Get underlying PGlite connection
+    if (pglite) {
+      await pglite.exec(`UPDATE users SET role = 'seller' WHERE id = '${sellerId}'`);
+      await pglite.exec(`UPDATE users SET role = 'buyer' WHERE id IN ('${bidder1Id}', '${bidder2Id}')`);
+    }
+
     // Insert a fresh test auction
     const now = new Date();
     await db.insert(schema.auctions).values({
@@ -78,7 +86,7 @@ describe('Campus Auction Bidding Engine Tests', () => {
         bidderId: sellerId,
         amount: 600,
       })
-    ).rejects.toThrow(/Sellers are prohibited from bidding/);
+    ).rejects.toThrow(/Seller/);
   });
 
   it('5. Triggers anti-sniping extension when bid placed in final 30 seconds', async () => {

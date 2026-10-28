@@ -156,11 +156,20 @@ router.post('/logout', (_req, res) => {
   return res.json({ success: true, message: 'Logged out successfully.' });
 });
 
-// 5. Demo/Testing Switch User (switch between Rohan, Ananya, Vikram, Priya, Proctor)
+// 5. Demo/Testing Switch User (switch between accounts by id or studentId)
 router.get('/switch-user/:id', async (req, res) => {
   try {
     const db = await getDb();
-    const users = await db.select().from(schema.users).where(eq(schema.users.id, req.params.id));
+    const queryId = req.params.id.trim();
+    const users = await db
+      .select()
+      .from(schema.users)
+      .where(
+        or(
+          eq(schema.users.id, queryId),
+          eq(schema.users.studentId, queryId.toUpperCase())
+        )
+      );
     if (users.length === 0) {
       return res.status(404).json({ error: 'User not found' });
     }
@@ -178,6 +187,27 @@ router.get('/test-accounts', async (_req, res) => {
     const db = await getDb();
     const allUsers = await db.select().from(schema.users);
     return res.json({ users: allUsers });
+  } catch (err: any) {
+    return res.status(500).json({ error: err.message });
+  }
+});
+
+// 7. Switch active role of current user (e.g. from seller to buyer)
+router.post('/switch-role', authMiddleware, async (req: AuthRequest, res: Response) => {
+  try {
+    const currentUser = req.user!;
+    const { role } = req.body;
+    const targetRole = role === 'seller' ? 'seller' : 'buyer';
+
+    const db = await getDb();
+    await db
+      .update(schema.users)
+      .set({ role: targetRole })
+      .where(eq(schema.users.id, currentUser.id));
+
+    const updatedUser = { ...currentUser, role: targetRole };
+    const token = generateToken({ id: updatedUser.id, email: updatedUser.email, role: targetRole });
+    return res.json({ message: `Role updated to ${targetRole}`, user: updatedUser, token });
   } catch (err: any) {
     return res.status(500).json({ error: err.message });
   }

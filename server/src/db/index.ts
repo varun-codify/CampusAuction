@@ -20,6 +20,9 @@ CREATE TABLE IF NOT EXISTS users (
   student_id VARCHAR(64) NOT NULL UNIQUE,
   campus VARCHAR(255) NOT NULL DEFAULT 'IIT Kharagpur',
   hall VARCHAR(255) NOT NULL DEFAULT 'Nehru Hall',
+  department VARCHAR(50) NOT NULL DEFAULT 'Others',
+  batch_year VARCHAR(10) NOT NULL DEFAULT '2026',
+  handle VARCHAR(32) NOT NULL UNIQUE,
   phone VARCHAR(32),
   is_verified BOOLEAN NOT NULL DEFAULT true,
   trust_score INTEGER NOT NULL DEFAULT 98,
@@ -30,6 +33,9 @@ CREATE TABLE IF NOT EXISTS users (
 );
 
 ALTER TABLE users ADD COLUMN IF NOT EXISTS password_hash TEXT;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS department VARCHAR(50) DEFAULT 'Others';
+ALTER TABLE users ADD COLUMN IF NOT EXISTS batch_year VARCHAR(10) DEFAULT '2026';
+ALTER TABLE users ADD COLUMN IF NOT EXISTS handle VARCHAR(32);
 
 CREATE TABLE IF NOT EXISTS auctions (
   id VARCHAR(64) PRIMARY KEY,
@@ -154,8 +160,8 @@ export async function getDb() {
 
   try {
     await pglite.exec(`
-      UPDATE users SET role = 'seller' WHERE id IN ('usr-vikram-23', 'usr-ananya-25') AND (role = 'student' OR role IS NULL);
-      UPDATE users SET role = 'buyer' WHERE id IN ('usr-rohan-24', 'usr-priya-26') AND (role = 'student' OR role IS NULL);
+      UPDATE users SET role = 'seller' WHERE id IN ('usr-vikram-23', 'usr-ananya-25');
+      UPDATE users SET role = 'buyer' WHERE id IN ('usr-rohan-24', 'usr-priya-26');
       UPDATE users SET role = 'buyer' WHERE role = 'student';
     `);
   } catch (migErr) {

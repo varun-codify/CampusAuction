@@ -34,6 +34,14 @@ export const ProfileTrustPage: React.FC = () => {
               <span className="text-xs text-slate-600 font-semibold mt-1">
                 {user?.hall} • {user?.campus}
               </span>
+
+              {/* Department & Batch Year */}
+              {user?.department && (
+                <div className="flex items-center gap-1.5 text-indigo-700 text-xs font-bold mt-1">
+                  <span className="material-symbols-outlined text-base font-variation-fill">subject</span>
+                  <span>{user?.department} {user?.batchYear ? `• Class of ${user.batchYear}` : ''}</span>
+                </div>
+              )}
             </div>
           </div>
 
@@ -51,7 +59,7 @@ export const ProfileTrustPage: React.FC = () => {
           <div className="bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col gap-1">
             <div className="flex items-center gap-1.5 text-emerald-700 text-xs font-bold">
               <span className="material-symbols-outlined text-base font-variation-fill">verified_user</span>
-              <span>Identity Verified</span>
+              {user?.isVerified ? (<span>Verified Student</span>) : (<span>Identity Verified</span>)}
             </div>
             <p className="text-[11px] text-slate-500 mt-1">
               Active campus email &amp; enrollment record matched.

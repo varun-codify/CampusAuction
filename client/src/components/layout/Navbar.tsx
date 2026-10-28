@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 
 export const Navbar: React.FC = () => {
-  const { user, unreadCount, testAccounts, switchUser, logout } = useAuth();
+  const { user, unreadCount, testAccounts, switchUser, switchRole, logout } = useAuth();
   const [search, setSearch] = useState('');
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const navigate = useNavigate();
@@ -215,12 +215,62 @@ export const Navbar: React.FC = () => {
                 </div>
 
                 <div className="border-t border-slate-100 pt-1">
+                  {/* Instant Role Toggle */}
+                  <button
+                    type="button"
+                    onClick={async () => {
+                      setDropdownOpen(false);
+                      const targetRole = user.role === 'seller' ? 'buyer' : 'seller';
+                      await switchRole(targetRole);
+                    }}
+                    className="w-full text-left px-4 py-2 text-xs font-semibold text-primary hover:bg-indigo-50/70 flex items-center justify-between transition-colors"
+                  >
+                    <span className="flex items-center gap-1.5">
+                      <span className="material-symbols-outlined text-sm">swap_horiz</span>
+                      <span>Switch Active Mode to {user.role === 'seller' ? 'Buyer (Bidding)' : 'Seller (Listing)'}</span>
+                    </span>
+                    <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                  </button>
+
+                  {/* Quick Switch between registered buyer/seller accounts */}
+                  {user.role === 'seller' ? (
+                    <button
+                      type="button"
+                      onClick={async () => {
+                        setDropdownOpen(false);
+                        await switchUser('23ADR001');
+                      }}
+                      className="w-full text-left px-4 py-2 text-xs font-semibold text-indigo-700 hover:bg-indigo-50/70 flex items-center justify-between transition-colors"
+                    >
+                      <span className="flex items-center gap-1.5">
+                        <span className="material-symbols-outlined text-sm">shopping_cart</span>
+                        <span>Switch to Buyer (23ADR001)</span>
+                      </span>
+                      <span className="material-symbols-outlined text-xs bg-indigo-100 px-1 rounded font-mono">23ADR001</span>
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={async () => {
+                        setDropdownOpen(false);
+                        await switchUser('23ADR002');
+                      }}
+                      className="w-full text-left px-4 py-2 text-xs font-semibold text-amber-700 hover:bg-amber-50/70 flex items-center justify-between transition-colors"
+                    >
+                      <span className="flex items-center gap-1.5">
+                        <span className="material-symbols-outlined text-sm">sell</span>
+                        <span>Switch to Seller (23ADR002)</span>
+                      </span>
+                      <span className="material-symbols-outlined text-xs bg-amber-100 px-1 rounded font-mono">23ADR002</span>
+                    </button>
+                  )}
+
                   <Link
                     to={`/login?role=${user.role === 'seller' ? 'buyer' : 'seller'}`}
                     onClick={() => setDropdownOpen(false)}
                     className="w-full text-left px-4 py-2 text-xs text-slate-600 hover:bg-slate-50 font-medium flex items-center justify-between"
                   >
-                    <span>Switch to {user.role === 'seller' ? 'Buyer' : 'Seller'} Portal</span>
+                    <span>Login with Different Account</span>
                     <span className="material-symbols-outlined text-sm text-slate-400">sync_alt</span>
                   </Link>
                   <button

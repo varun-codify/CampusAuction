@@ -16,11 +16,10 @@ function getHeaders() {
   const headers: Record<string, string> = {
     'Content-Type': 'application/json',
   };
-  if (userId) {
-    headers['x-user-id'] = userId;
-  }
   if (token) {
     headers['Authorization'] = `Bearer ${token}`;
+  } else if (userId) {
+    headers['x-user-id'] = userId;
   }
   return headers;
 }
@@ -85,6 +84,16 @@ export const api = {
     return await res.json();
   },
 
+  async switchRole(role: 'buyer' | 'seller'): Promise<{ user: User; token: string }> {
+    const res = await fetch(`${API_BASE}/auth/switch-role`, {
+      method: 'POST',
+      headers: getHeaders(),
+      body: JSON.stringify({ role }),
+    });
+    if (!res.ok) throw new Error('Switch role failed');
+    return await res.json();
+  },
+
   async getTestAccounts(): Promise<User[]> {
     const res = await fetch(`${API_BASE}/auth/test-accounts`);
     if (!res.ok) throw new Error('Failed to fetch accounts');
@@ -93,7 +102,15 @@ export const api = {
   },
 
   // Auctions
-  async getAuctions(params?: { q?: string; category?: string; condition?: string; status?: string; sort?: string }): Promise<Auction[]> {
+  async getAuctions(params?: {
+    q?: string;
+    category?: string;
+    condition?: string;
+    department?: string;
+    batchYear?: string;
+    status?: string;
+    sort?: string;
+  }): Promise<Auction[]> {
     const query = new URLSearchParams(params as any).toString();
     const res = await fetch(`${API_BASE}/auctions?${query}`);
     if (!res.ok) throw new Error('Failed to fetch auctions');

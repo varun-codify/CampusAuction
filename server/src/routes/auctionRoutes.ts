@@ -17,7 +17,7 @@ const router = Router();
 router.get('/', async (req, res) => {
   try {
     const db = await getDb();
-    const { q, category, condition, status, sort } = req.query;
+    const { q, category, condition, status, sort, department, batchYear } = req.query;
 
     let query = db
       .select({
@@ -43,6 +43,8 @@ router.get('/', async (req, res) => {
         sellerName: schema.users.name,
         sellerCampus: schema.users.campus,
         sellerHall: schema.users.hall,
+        sellerDepartment: schema.users.department,
+        sellerBatchYear: schema.users.batchYear,
         sellerTrustScore: schema.users.trustScore,
         sellerVerified: schema.users.isVerified,
       })
@@ -75,6 +77,16 @@ router.get('/', async (req, res) => {
     // Status filter
     if (status && typeof status === 'string') {
       conditions.push(eq(schema.auctions.status, status));
+    }
+
+    // Department filter (filter by seller's department)
+    if (department && typeof department === 'string' && department !== 'All') {
+      conditions.push(eq(schema.users.department, department));
+    }
+
+    // Batch year filter (filter by seller's batch year)
+    if (batchYear && typeof batchYear === 'string' && batchYear !== 'All') {
+      conditions.push(eq(schema.users.batchYear, batchYear));
     }
 
     if (conditions.length > 0) {

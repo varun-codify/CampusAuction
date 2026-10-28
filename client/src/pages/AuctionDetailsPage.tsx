@@ -5,9 +5,17 @@ import { api, socket } from '../services/api';
 import { useAuth } from '../context/AuthContext';
 import confetti from 'canvas-confetti';
 
+interface ChatMessage {
+  id: string;
+  userId: string;
+  userName: string;
+  message: string;
+  createdAt: string;
+}
+
 export const AuctionDetailsPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const { user } = useAuth();
+  const { user, switchUser, switchRole } = useAuth();
 
   const [auction, setAuction] = useState<Auction | null>(null);
   const [bids, setBids] = useState<any[]>([]);
@@ -29,6 +37,11 @@ export const AuctionDetailsPage: React.FC = () => {
   const [newQuestion, setNewQuestion] = useState('');
   const [answeringQaId, setAnsweringQaId] = useState<string | null>(null);
   const [newAnswer, setNewAnswer] = useState('');
+
+  // Chat messages state
+  const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
+  const [newMessage, setNewMessage] = useState('');
+  const [showChat, setShowChat] = useState(false);
 
   // Anti-snipe and countdown timer state
   const [antiSnipeBannerVisible, setAntiSnipeBannerVisible] = useState(false);
@@ -66,6 +79,9 @@ export const AuctionDetailsPage: React.FC = () => {
     if (id) {
       socket.emit('join:auction', id);
 
+      // Join chat room for this auction
+      socket.emit('chat:join', id);
+
       socket.on('auction:bid', (event) => {
         setAuction((prev: any) => {
           if (!prev) return prev;
@@ -98,11 +114,17 @@ export const AuctionDetailsPage: React.FC = () => {
       socket.on('auction:closed', (event) => {
         setAuction((prev: any) => prev ? { ...prev, status: event.status } : prev);
       });
+
+      // Real-time chat messaging
+      socket.on('chat:message', (msg: ChatMessage) => {
+        setChatMessages((prev) => [msg, ...prev].slice(0, 50)); // Keep last 50 messages
+      });
     }
 
     return () => {
       if (id) {
         socket.emit('leave:auction', id);
+        socket.emit('chat:leave', id);
         socket.off('auction:bid');
         socket.off('auction:extended');
         socket.off('auction:closed');
@@ -161,6 +183,22 @@ export const AuctionDetailsPage: React.FC = () => {
       setNewQuestion('');
     } catch (err: any) {
       alert(err.message || 'Failed to ask question');
+    }
+  };
+
+  const handleSendMessage = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!id || !newMessage.trim() || !user) return;
+    try {
+      await socket.emit('chat:message', {
+        auctionId: id,
+        userId: user.id,
+        userName: user.name,
+        message: newMessage,
+      });
+      setNewMessage('');
+    } catch (err: any) {
+      alert(err.message || 'Failed to send message');
     }
   };
 
@@ -439,6 +477,61 @@ export const AuctionDetailsPage: React.FC = () => {
               )}
             </div>
           </div>
+          {/* Real-time Chat Section matching CampusXchange */}
+          <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col gap-4 mb-4">
+            <div className="flex items-center justify-between">
+              <div>
+                <span className="material-symbols-outlined text-primary text-xl">message</span>
+                <h3 className="font-bold text-base text-slate-900">Live Chat</h3>
+                <span className="text-xs text-slate-500">{chatMessages.length} messages</span>
+              </div>
+              {user && user.id !== auction.sellerId && (
+                <button
+                  onClick={() => setShowChat(!showChat)}
+                  className="text-primary text-xs font-bold hover:underline"
+                >
+                  Open
+                </button>
+              )}
+            </div>
+
+            <div className="space-y-2 max-h-80 overflow-y-auto" id="chat-scroll">
+              {chatMessages.length === 0 ? (
+                <p className="text-xs text-slate-400 italic">No messages yet. Be the first to start a conversation!</p>
+              ) : (
+                chatMessages.reverse().map((msg: ChatMessage, idx: number) => (
+                  <div key={msg.id} className="p-3 rounded-xl border border-indigo-100/50 flex items-start gap-3 text-xs">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center text-xs font-bold">
+                      {msg.userName?.charAt(0) || 'U'}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <span className="font-bold text-slate-800">{msg.userName || 'Anonymous'}</span>
+                      <span className="text-[10px] text-slate-400">{new Date(msg.createdAt).toLocaleTimeString()}</span>
+                      <p className="mt-0.5 line-clamp-2">{msg.message}</p>
+                    </div>
+                  </div>
+                ))
+              )}
+            </div>
+
+            {/* Message Input Form */}
+            <form onSubmit={handleSendMessage} className="flex gap-2 pt-3 border-t border-slate-100">
+              <input
+                type="text"
+                value={newMessage}
+                onChange={(e) => setNewMessage(e.target.value)}
+                placeholder="Type a message..."
+                className="flex-1 bg-slate-50 border border-slate-200 rounded-xl px-3 py-1.5 text-sm text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20"
+              />
+              <button
+                type="submit"
+                disabled={!newMessage.trim() || !user}
+                className="px-4 py-1.5 bg-primary hover:bg-primary-hover text-white text-xs font-bold rounded-lg transition-all shadow-sm"
+              >
+                Send
+              </button>
+            </form>
+          </div>
         </div>
 
         {/* RIGHT COLUMN: Live Countdown, Bidding Control, Ledger (5 Cols) */}
@@ -559,24 +652,42 @@ export const AuctionDetailsPage: React.FC = () => {
                 )}
               </div>
             ) : user?.role === 'seller' || isSeller ? (
-              <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-900 flex flex-col gap-2">
+              <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-900 flex flex-col gap-2.5">
                 <div className="flex items-center gap-1.5 font-bold">
                   <span className="material-symbols-outlined text-base text-amber-700">sell</span>
                   <span>Campus Seller Mode Active</span>
                 </div>
                 <p className="text-[11px] text-slate-600 leading-relaxed">
                   {isSeller
-                    ? 'You are the seller of this listing. Track incoming bids on the ledger below or review provisional outcomes in Seller Decisions.'
-                    : 'Campus Sellers are restricted from bidding on auctions to eliminate conflicts of interest and prevent shill bidding.'}
+                    ? 'You are the registered seller of this listing. Sellers cannot bid on their own listings to protect auction fairness.'
+                    : 'Campus Sellers are restricted from bidding on auctions. To place a bid, switch your account to Buyer mode or use a Buyer account.'}
                 </p>
                 {!isSeller && (
-                  <Link
-                    to="/login?role=buyer"
-                    className="self-start text-[11px] font-bold text-amber-900 bg-white border border-amber-300 px-3 py-1.5 rounded-lg hover:bg-amber-100 transition-colors flex items-center gap-1 mt-1"
-                  >
-                    <span>Switch to Campus Buyer Portal</span>
-                    <span className="material-symbols-outlined text-xs">arrow_forward</span>
-                  </Link>
+                  <div className="pt-1 flex flex-col gap-1.5 border-t border-amber-200/60">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-amber-800">Quick Actions:</span>
+                    <div className="flex flex-wrap gap-2">
+                      <button
+                        type="button"
+                        onClick={async () => {
+                          await switchRole('buyer');
+                        }}
+                        className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-lg shadow-sm flex items-center gap-1.5 transition-all cursor-pointer"
+                      >
+                        <span className="material-symbols-outlined text-sm">swap_horiz</span>
+                        <span>Switch My Account to Buyer Mode</span>
+                      </button>
+                      <button
+                        type="button"
+                        onClick={async () => {
+                          await switchUser('23ADR001');
+                        }}
+                        className="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs rounded-lg shadow-sm flex items-center gap-1.5 transition-all cursor-pointer"
+                      >
+                        <span className="material-symbols-outlined text-sm">shopping_cart</span>
+                        <span>Switch to Buyer (23ADR001)</span>
+                      </button>
+                    </div>
+                  </div>
                 )}
               </div>
             ) : (
@@ -682,8 +793,66 @@ export const AuctionDetailsPage: React.FC = () => {
             </div>
 
             {bidError && (
-              <div className="bg-red-50 text-red-700 text-xs p-3 rounded-xl border border-red-200 font-semibold">
-                {bidError}
+              <div className="bg-red-50 text-red-700 text-xs p-3.5 rounded-xl border border-red-200 font-semibold flex flex-col gap-2.5">
+                <div className="flex items-start gap-2">
+                  <span className="material-symbols-outlined text-base text-red-500 shrink-0">error</span>
+                  <span>{bidError}</span>
+                </div>
+                {bidError.includes('Seller accounts are prohibited from bidding') && (
+                  <div className="pt-2 border-t border-red-200/60 flex flex-col gap-2">
+                    <span className="text-[11px] text-slate-700 font-normal">
+                      Your current session is in <strong>Campus Seller mode</strong>. Choose an option to submit your bid immediately:
+                    </span>
+                    <div className="flex flex-col gap-2">
+                      <button
+                        type="button"
+                        onClick={async () => {
+                          try {
+                            await switchRole('buyer');
+                            setBidError(null);
+                            setTimeout(() => {
+                              handlePlaceBid();
+                            }, 300);
+                          } catch (err: any) {
+                            setBidError(err.message || 'Failed to switch role to buyer');
+                          }
+                        }}
+                        className="py-2.5 px-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-xs shadow-md flex items-center justify-center gap-1.5 transition-all cursor-pointer"
+                      >
+                        <span className="material-symbols-outlined text-sm">swap_horiz</span>
+                        <span>Switch My Account to Buyer Mode &amp; Bid</span>
+                      </button>
+
+                      <button
+                        type="button"
+                        onClick={async () => {
+                          try {
+                            await switchUser('23ADR001');
+                            setBidError(null);
+                            // Re-trigger the bid
+                            setTimeout(() => {
+                              handlePlaceBid();
+                            }, 300);
+                          } catch {
+                            try {
+                              await switchUser('usr-rohan-24');
+                              setBidError(null);
+                              setTimeout(() => {
+                                handlePlaceBid();
+                              }, 300);
+                            } catch {
+                              alert('Please sign in with your buyer account at /login?role=buyer');
+                            }
+                          }
+                        }}
+                        className="py-2 px-3 bg-indigo-50 hover:bg-indigo-100 text-indigo-800 border border-indigo-200 font-bold rounded-xl text-xs flex items-center justify-center gap-1.5 transition-all cursor-pointer"
+                      >
+                        <span className="material-symbols-outlined text-sm">switch_account</span>
+                        <span>Switch to Buyer (23ADR001) &amp; Place Bid</span>
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
             )}
 

@@ -74,6 +74,18 @@ io.on('connection', (socket) => {
   socket.on('leave:user', (userId: string) => {
     socket.leave(`user:${userId}`);
   });
+
+  // Real-time chat messaging
+  socket.on('chat:message', (data: { auctionId: string; userId: string; userName: string; message: string }) => {
+    // Broadcast message to all participants in the auction room
+    io.to(`auction:${data.auctionId}`).emit('chat:message', {
+      auctionId: data.auctionId,
+      userId: data.userId,
+      userName: data.userName,
+      message: data.message,
+      createdAt: new Date(),
+    });
+  });
 });
 
 // Start Server, Background Worker, and Auto-seed

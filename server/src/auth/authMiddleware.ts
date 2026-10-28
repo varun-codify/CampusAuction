@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 import { getDb, schema } from '../db/index.js';
-import { eq } from 'drizzle-orm';
+import { eq, or } from 'drizzle-orm';
 import { User } from '../../../shared/types.js';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'super-secure-campus-bid-secret-key-2026';
@@ -17,36 +17,59 @@ export async function authMiddleware(req: AuthRequest, res: Response, next: Next
 
     const db = await getDb();
 
-    // 1. Direct developer header bypass for seamless student testing
-    if (devUserId) {
-      const users = await db.select().from(schema.users).where(eq(schema.users.id, devUserId));
-      if (users.length > 0) {
-        req.user = users[0] as unknown as User;
-        return next();
-      }
-    }
-
-    // 2. Bearer Token Check (JWT or Supabase Auth)
+    // 1. Authoritative Bearer Token Check (JWT Session)
     if (authHeader && authHeader.startsWith('Bearer ')) {
       const token = authHeader.substring(7);
 
       try {
         const decoded = jwt.verify(token, JWT_SECRET) as any;
         if (decoded?.id) {
-          const users = await db.select().from(schema.users).where(eq(schema.users.id, decoded.id));
+          const users = await db
+            .select()
+            .from(schema.users)
+            .where(
+              or(
+                eq(schema.users.id, decoded.id),
+                eq(schema.users.studentId, decoded.id)
+              )
+            );
           if (users.length > 0) {
             req.user = users[0] as unknown as User;
             return next();
           }
         }
       } catch (jwtErr) {
-        // Fallback or Supabase verification if configured
-        console.warn('[Auth] JWT token invalid, checking if token is mock user ID');
-        const users = await db.select().from(schema.users).where(eq(schema.users.id, token));
+        // Fallback check if token is mock user ID
+        const users = await db
+          .select()
+          .from(schema.users)
+          .where(
+            or(
+              eq(schema.users.id, token),
+              eq(schema.users.studentId, token)
+            )
+          );
         if (users.length > 0) {
           req.user = users[0] as unknown as User;
           return next();
         }
+      }
+    }
+
+    // 2. Developer header fallback for integration tests without JWT
+    if (devUserId) {
+      const users = await db
+        .select()
+        .from(schema.users)
+        .where(
+          or(
+            eq(schema.users.id, devUserId),
+            eq(schema.users.studentId, devUserId)
+          )
+        );
+      if (users.length > 0) {
+        req.user = users[0] as unknown as User;
+        return next();
       }
     }
 

@@ -28,6 +28,8 @@ export const MarketplacePage: React.FC = () => {
   const [auctions, setAuctions] = useState<Auction[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedDepartment, setSelectedDepartment] = useState('All');
+  const [selectedBatchYear, setSelectedBatchYear] = useState('All');
   const [selectedSort, setSelectedSort] = useState('closing_soon');
   const [searchQuery, setSearchQuery] = useState(searchParamQuery);
   const [liveAlert, setLiveAlert] = useState<LiveAlert | null>(null);
@@ -39,6 +41,8 @@ export const MarketplacePage: React.FC = () => {
       const list = await api.getAuctions({
         q: searchQuery || undefined,
         category: selectedCategory !== 'All' ? selectedCategory : undefined,
+        department: selectedDepartment !== 'All' ? selectedDepartment : undefined,
+        batchYear: selectedBatchYear !== 'All' ? selectedBatchYear : undefined,
         sort: selectedSort,
       });
       setAuctions(list);
@@ -55,7 +59,7 @@ export const MarketplacePage: React.FC = () => {
 
   useEffect(() => {
     fetchAuctions();
-  }, [selectedCategory, selectedSort, searchQuery]);
+  }, [selectedCategory, selectedDepartment, selectedBatchYear, selectedSort, searchQuery]);
 
   // Real-Time Socket.IO Subscriptions: Reflect newly listed items and live bids instantly!
   useEffect(() => {
@@ -226,6 +230,106 @@ export const MarketplacePage: React.FC = () => {
               {cat}
             </button>
           ))}
+        </div>
+
+        {/* Department Pills */}
+        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 md:pb-0 scrollbar-none">
+          <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-500">Dept:</div>
+          <button
+            key="All"
+            onClick={() => setSelectedDepartment('All')}
+            className={`px-3 py-1.5 rounded-full text-[10px] font-semibold whitespace-nowrap transition-all ${
+              selectedDepartment === 'All'
+                ? 'bg-primary text-white shadow-sm'
+                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+            }`}
+          >All</button>
+          <button
+            key="Computer Science"
+            onClick={() => setSelectedDepartment('Computer Science')}
+            className={`px-3 py-1.5 rounded-full text-[10px] font-semibold whitespace-nowrap transition-all ${
+              selectedDepartment === 'Computer Science'
+                ? 'bg-primary text-white shadow-sm'
+                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+            }`}
+          >CS</button>
+          <button
+            key="Electrical"
+            onClick={() => setSelectedDepartment('Electrical')}
+            className={`px-3 py-1.5 rounded-full text-[10px] font-semibold whitespace-nowrap transition-all ${
+              selectedDepartment === 'Electrical'
+                ? 'bg-primary text-white shadow-sm'
+                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+            }`}
+          >EE</button>
+          <button
+            key="Mechanical"
+            onClick={() => setSelectedDepartment('Mechanical')}
+            className={`px-3 py-1.5 rounded-full text-[10px] font-semibold whitespace-nowrap transition-all ${
+              selectedDepartment === 'Mechanical'
+                ? 'bg-primary text-white shadow-sm'
+                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+            }`}
+          >ME</button>
+          <button
+            key="Aerospace"
+            onClick={() => setSelectedDepartment('Aerospace')}
+            className={`px-3 py-1.5 rounded-full text-[10px] font-semibold whitespace-nowrap transition-all ${
+              selectedDepartment === 'Aerospace'
+                ? 'bg-primary text-white shadow-sm'
+                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+            }`}
+          >AE</button>
+        </div>
+
+        {/* Batch Year Pills */}
+        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 md:pb-0 scrollbar-none">
+          <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-500">Batch:</div>
+          <button
+            key="All"
+            onClick={() => setSelectedBatchYear('All')}
+            className={`px-3 py-1.5 rounded-full text-[10px] font-semibold whitespace-nowrap transition-all ${
+              selectedBatchYear === 'All'
+                ? 'bg-primary text-white shadow-sm'
+                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+            }`}
+          >All</button>
+          <button
+            key="2023"
+            onClick={() => setSelectedBatchYear('2023')}
+            className={`px-3 py-1.5 rounded-full text-[10px] font-semibold whitespace-nowrap transition-all ${
+              selectedBatchYear === '2023'
+                ? 'bg-primary text-white shadow-sm'
+                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+            }`}
+          >23</button>
+          <button
+            key="2024"
+            onClick={() => setSelectedBatchYear('2024')}
+            className={`px-3 py-1.5 rounded-full text-[10px] font-semibold whitespace-nowrap transition-all ${
+              selectedBatchYear === '2024'
+                ? 'bg-primary text-white shadow-sm'
+                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+            }`}
+          >24</button>
+          <button
+            key="2025"
+            onClick={() => setSelectedBatchYear('2025')}
+            className={`px-3 py-1.5 rounded-full text-[10px] font-semibold whitespace-nowrap transition-all ${
+              selectedBatchYear === '2025'
+                ? 'bg-primary text-white shadow-sm'
+                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+            }`}
+          >25</button>
+          <button
+            key="2026"
+            onClick={() => setSelectedBatchYear('2026')}
+            className={`px-3 py-1.5 rounded-full text-[10px] font-semibold whitespace-nowrap transition-all ${
+              selectedBatchYear === '2026'
+                ? 'bg-primary text-white shadow-sm'
+                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+            }`}
+          >26</button>
         </div>
 
         {/* Sort Dropdown */}

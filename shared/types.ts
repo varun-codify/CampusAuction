@@ -1,5 +1,9 @@
 export type UserRole = 'buyer' | 'seller' | 'student' | 'admin' | 'moderator';
 
+export type Department = 'Computer Science' | 'Electronics' | 'Electrical' | 'Mechanical' | 'Civil' | 'Aerospace' | 'Mathematics' | 'Physics' | 'Chemistry' | 'Others';
+
+export type BatchYear = '2023' | '2024' | '2025' | '2026' | '2027' | 'Others';
+
 export interface User {
   id: string;
   email: string;
@@ -7,6 +11,9 @@ export interface User {
   studentId: string;
   campus: string;
   hall: string;
+  department: Department;
+  batchYear: BatchYear;
+  handle: string;
   phone?: string;
   isVerified: boolean;
   trustScore: number;
