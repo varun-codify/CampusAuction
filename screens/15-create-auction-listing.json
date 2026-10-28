@@ -1,0 +1,17 @@
+{
+  "deviceType": "DESKTOP",
+  "height": "5656",
+  "htmlCode": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/15375059538578470502/files/8e501d6a8359449fa531882d1989438f:download",
+    "mimeType": "text/html",
+    "name": "projects/15375059538578470502/screens/8e501d6a8359449fa531882d1989438f/fileEntries/html"
+  },
+  "name": "projects/15375059538578470502/screens/8e501d6a8359449fa531882d1989438f",
+  "screenshot": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/15375059538578470502/files/screenshot_00065edf798c20ff02a995b4c00c510b:download",
+    "mimeType": "image/png",
+    "name": "projects/15375059538578470502/screens/8e501d6a8359449fa531882d1989438f/fileEntries/screenshot"
+  },
+  "title": "Create Auction Listing - Campus Auction",
+  "width": "2560"
+}

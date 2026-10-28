@@ -1,0 +1,17 @@
+{
+  "deviceType": "DESKTOP",
+  "height": "2672",
+  "htmlCode": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/15375059538578470502/files/bd82e90d6fc64034b59645f133a19f85:download",
+    "mimeType": "text/html",
+    "name": "projects/15375059538578470502/screens/bd82e90d6fc64034b59645f133a19f85/fileEntries/html"
+  },
+  "name": "projects/15375059538578470502/screens/bd82e90d6fc64034b59645f133a19f85",
+  "screenshot": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/15375059538578470502/files/screenshot_00065edf3916d31701ee7ee3141e5c77:download",
+    "mimeType": "image/png",
+    "name": "projects/15375059538578470502/screens/bd82e90d6fc64034b59645f133a19f85/fileEntries/screenshot"
+  },
+  "title": "Campus Sign In - Campus Auction",
+  "width": "2560"
+}

@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-error":"#ffffff","tertiary-fixed":"#85f8c4","tertiary":"#00442d","on-error-container":"#93000a","primary-fixed-dim":"#c3c0ff","surface-tint":"#5148d7","on-primary-fixed-variant":"#372abf","primary":"#2a14b4","surface-container-low":"#eff4ff","on-surface-variant":"#464554","on-tertiary-fixed":"#002114","outline-variant":"#c7c4d7","surface-container-lowest":"#ffffff","on-tertiary":"#ffffff","on-secondary-fixed-variant":"#3f465c","inverse-surface":"#213145","on-secondary-container":"#5c647a","surface":"#f8f9ff","tertiary-container":"#005e40","secondary-fixed-dim":"#bec6e0","surface-container-high":"#dce9ff","on-background":"#0b1c30","on-primary-container":"#c1beff","surface-container-highest":"#d3e4fe","secondary-fixed":"#dae2fd","on-tertiary-container":"#66daa8","primary-container":"#4338ca","surface-bright":"#f8f9ff","on-primary-fixed":"#100069","surface-dim":"#cbdbf5","on-tertiary-fixed-variant":"#005137","on-surface":"#0b1c30","inverse-on-surface":"#eaf1ff","error-container":"#ffdad6","background":"#f8f9ff","secondary-container":"#dae2fd","on-secondary":"#ffffff","outline":"#777586","error":"#ba1a1a","surface-container":"#e5eeff","surface-variant":"#d3e4fe","on-primary":"#ffffff","primary-fixed":"#e3dfff","inverse-primary":"#c3c0ff","on-secondary-fixed":"#131b2e","tertiary-fixed-dim":"#68dba9","secondary":"#565e74"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-md":"1rem","space-lg":"1.5rem","space-xl":"2.5rem","margin-desktop":"3rem","margin":"1rem","gutter":"1.25rem","gutter-desktop":"2rem","space-sm":"0.5rem","space-xs":"0.25rem"},fontFamily:{"bid-numeral-lg":["JetBrains Mono"],"body-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"timer-display":["JetBrains Mono"],"display-lg-mobile":["Plus Jakarta Sans"],"label-caps":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"bid-numeral-md":["JetBrains Mono"],"headline-xl":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"]},fontSize:{"bid-numeral-lg":["28px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["15px",{"lineHeight":"22px","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"timer-display":["14px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-lg-mobile":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"800"}],"label-caps":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"700"}],"headline-xl-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"display-lg":["44px",{"lineHeight":"52px","letterSpacing":"-0.03em","fontWeight":"800"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"bid-numeral-md":["18px",{"lineHeight":"22px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-[68px] bg-surface-container-lowest z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-space-md lg:px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm min-w-[240px]"><img alt="Campus Auction Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WmTRQheuLZhejcdh1u0Rznffh09fF09dc4AzWw1Uk3aLVHkuu6mmZGqOp0UzAzjBTpmW5e-iV068XESYAj5yAP2jVjD_RqRt_hXyDZJeFFPlszQmOw0VsaTMuitB0J3JWAN1RM8J476ERTPGRaV7sLo9imsy5ZM62tneuww4hOAE9qh7f9WT8IzmtR7kb284p6-xyfL_0fujvu_1olrN5RlTU7ERsWdH6zm69_Tx9R"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight font-bold">Campus Auction</span><span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">IIT / NIT Campus Hub</span></div></div><div class="flex-1 max-w-2xl hidden md:flex items-center"><div class="w-full flex items-center bg-surface-container-low rounded-lg px-space-sm py-1.5 focus-within:bg-surface-container-lowest transition-colors"><span class="material-symbols-outlined text-on-surface-variant text-xl mr-space-xs">search</span><input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none" placeholder="Find something for your campus... (cycles, calculators, books)" type="text"/><div class="flex items-center gap-1 pl-space-xs border-l border-outline-variant/30"><button class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface flex items-center gap-0.5 px-space-xs py-0.5 rounded"><span class="font-medium">All</span><span class="material-symbols-outlined text-sm">expand_more</span></button></div></div></div><div class="flex items-center gap-space-md justify-end"><div class="hidden xl:flex items-center gap-1.5 bg-secondary-container/60 px-space-sm py-1 rounded-full text-on-secondary-fixed"><span class="material-symbols-outlined text-primary text-base font-bold">verified</span><span class="font-label-caps text-label-caps font-semibold">Verified Member</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 bg-error text-on-error font-timer-display text-[10px] rounded-full flex items-center justify-center font-bold leading-none">3</span></button><a class="hidden sm:flex items-center gap-1.5 bg-primary-container text-on-primary font-headline-sm text-body-sm font-semibold px-space-md py-2 rounded-lg hover:opacity-95 transition-opacity shadow-sm" data-path="list-item" href="15-create-auction-listing.html"><span class="material-symbols-outlined text-lg leading-none">add</span><span>List an Item</span></a><div class="flex items-center gap-space-xs pl-space-xs cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABN9lhbKiE4bRMwKIzGlZE7jQ3pIqAiWsq0adriDxqACzKONcj7950ii5Wi82O79yS2nhc_iyq8bd_nSFAAqIFNAacCzDHGPigrcHsNSgUujSPSGI95Z3xlEJkEMOfwFa3VsniAN9T6QXJf0iw2CNFJ40IA2cIJXFjtdXARKsFPD7jh1vb_x-aajwhdhZ60-Pt24ldYsxHj0H0ChVrduOlmR13LrF87yJfCZ2zK8tu"/><div class="hidden lg:flex flex-col text-left"><span class="font-headline-sm text-body-sm font-semibold text-on-surface leading-tight">Rohan S.</span><span class="font-label-caps text-label-caps text-on-surface-variant">B.Tech '24</span></div><span class="material-symbols-outlined text-on-surface-variant text-base">expand_more</span></div></div></header><aside class="fixed left-0 top-[68px] bottom-0 w-[260px] bg-surface-container-lowest z-40 flex flex-col py-space-md overflow-y-auto"><div class="px-space-md pb-space-sm"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Main Navigation</span></div><nav class="px-space-sm flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary font-semibold"><a aria-current="page" class="flex items-center justify-between px-space-sm py-2 rounded-lg transition-colors bg-primary-container text-on-primary font-semibold" data-path="discover" href="02-discover-marketplace.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">explore</span><span>Discover / Home</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="browse-auctions" href="01-live-auction-hero-sprint-bicycle.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">gavel</span><span>Browse Auctions</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="my-bids" href="04-my-bids.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">pan_tool_alt</span><span>My Bids</span></div><span class="font-timer-display text-[11px] bg-secondary-container text-on-secondary-fixed font-bold px-1.5 py-0.5 rounded-full">2</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="my-watchlist" href="05-my-watchlist.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">bookmark</span><span>My Watchlist</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="saved-searches" href="06-saved-searches.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">saved_search</span><span>Saved Searches</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="ai-assistant" href="07-ai-assistant.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl text-primary">auto_awesome</span><span>AI Assistant</span></div><span class="font-label-caps text-[10px] bg-tertiary-fixed text-on-tertiary-fixed font-bold px-1.5 py-0.5 rounded">Smart</span></a></nav><div class="px-space-md pt-space-lg pb-space-sm"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Seller Hub</span></div><nav class="px-space-sm flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="my-listings" href="09-my-listings.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">inventory_2</span><span>My Listings</span></div><span class="font-label-caps text-[10px] bg-secondary-fixed text-on-secondary-fixed px-1.5 py-0.5 rounded font-medium">1 pending</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="seller-decisions" href="08-seller-decisions.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">fact_check</span><span>Seller Decisions</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="questions-and-answers" href="10-questions-and-answers.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">chat</span><span>Questions &amp; Answers</span></div></a></nav><div class="px-space-md pt-space-lg pb-space-sm"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Account &amp; Admin</span></div><nav class="px-space-sm flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="notifications" href="11-notifications.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">mail</span><span>Notifications</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="profile-and-trust" href="12-profile-and-trust.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">shield_person</span><span>Profile &amp; Trust</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="admin-moderation" href="13-admin-moderation.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">security</span><span>Admin Moderation</span></div></a></nav></aside><div class="pl-[260px]"><main class="relative pt-[68px] min-h-screen bg-surface px-space-md lg:px-gutter-desktop py-space-lg"><div class="flex flex-col w-full">
+<!-- Interactive State Scripts and Micro-Interactions -->
+<script>
+    function toggleWatchlist(btn) {
+      const icon = btn.querySelector('.material-symbols-outlined');
+      const isFavorited = icon.getAttribute('data-active') === 'true';
+      if (isFavorited) {
+        icon.setAttribute('data-active', 'false');
+        icon.style.fontVariationSettings = "'FILL' 0";
+        icon.classList.remove('text-error');
+        icon.classList.add('text-on-surface-variant');
+      } else {
+        icon.setAttribute('data-active', 'true');
+        icon.style.fontVariationSettings = "'FILL' 1";
+        icon.classList.remove('text-on-surface-variant');
+        icon.classList.add('text-error');
+      }
+    }
+
+    function selectCategory(pill) {
+      document.querySelectorAll('.cat-pill').forEach(el => {
+        el.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-sm');
+        el.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+      });
+      pill.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+      pill.classList.add('bg-primary-container', 'text-on-primary', 'shadow-sm');
+    }
+
+    function clearHeroSearch() {
+      const input = document.getElementById('marketplace-search-input');
+      if (input) {
+        input.value = '';
+        input.focus();
+      }
+    }
+  </script>
+<!-- Section 0: Academic Marketplace Hero & Curated Hub -->
+<section class="relative w-full rounded-2xl bg-surface-container-low p-space-lg lg:p-space-xl overflow-hidden shadow-sm">
+<div class="absolute -right-24 -top-24 w-96 h-96 bg-primary-fixed-dim/30 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute right-1/3 -bottom-24 w-72 h-72 bg-tertiary-fixed/30 rounded-full blur-2xl pointer-events-none"></div>
+<div class="relative z-10 max-w-4xl flex flex-col gap-space-md">
+<!-- Verifiable Trust Header Chip -->
+<div class="inline-flex items-center gap-2 self-start bg-surface-container-lowest px-3 py-1.5 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-tertiary text-base" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-label-caps text-label-caps text-on-surface tracking-wider uppercase">IIT / NIT Peer-to-Peer Verified Registry</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="font-body-sm text-body-sm text-tertiary font-semibold">Semester Exchange Active</span>
+</div>
+<!-- Hero Typography -->
+<div class="flex flex-col gap-2">
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight font-extrabold">
+          Find your next campus essential.
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+          Great finds. Fair bids. A second life for every verified instrument, textbook, cycle, and dorm fixture on campus.
+        </p>
+</div>
+<!-- Quick Search Bar with Built-in Campus Clear Button -->
+<div class="mt-space-xs w-full max-w-3xl bg-surface-container-lowest rounded-xl p-2 shadow-md flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+<div class="flex-1 flex items-center px-space-sm gap-2">
+<span class="material-symbols-outlined text-primary text-2xl">search</span>
+<input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none py-2" id="marketplace-search-input" placeholder="Search instruments, books, room appliances..." type="text" value="Cycles &amp; Scientific Calculators"/>
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded-full hover:bg-surface-container transition-colors" onclick="clearHeroSearch()" title="Clear search">
+<span class="material-symbols-outlined text-lg leading-none">close</span>
+</button>
+</div>
+<div class="flex items-center gap-2 px-space-xs justify-end">
+<div class="hidden md:flex items-center gap-1 text-on-secondary-container bg-surface-container px-2.5 py-1.5 rounded-lg text-xs font-medium">
+<span class="material-symbols-outlined text-sm">apartment</span>
+<span>Hostels 1–16</span>
+</div>
+<button class="bg-primary-container hover:opacity-95 text-on-primary font-headline-sm text-headline-sm px-space-lg py-2.5 rounded-lg transition-opacity flex items-center justify-center gap-1.5 shadow-sm">
+<span>Explore Bids</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Category Filter Pills with Item Badges -->
+<div class="flex flex-wrap items-center gap-2 pt-space-xs">
+<button class="cat-pill bg-primary-container text-on-primary px-3 py-1.5 rounded-full font-label-caps text-label-caps transition-all flex items-center gap-1.5 shadow-sm" onclick="selectCategory(this)">
+<span>All Items</span>
+<span class="font-timer-display text-[10px] bg-surface-container-lowest/25 px-1.5 py-0.5 rounded-full">48</span>
+</button>
+<button class="cat-pill bg-surface-container-low hover:bg-surface-container text-on-surface-variant px-3 py-1.5 rounded-full font-label-caps text-label-caps transition-all flex items-center gap-1.5" onclick="selectCategory(this)">
+<span>Cycles</span>
+<span class="font-timer-display text-[10px] bg-surface-container-high px-1.5 py-0.5 rounded-full text-on-surface">12</span>
+</button>
+<button class="cat-pill bg-surface-container-low hover:bg-surface-container text-on-surface-variant px-3 py-1.5 rounded-full font-label-caps text-label-caps transition-all flex items-center gap-1.5" onclick="selectCategory(this)">
+<span>Calculators</span>
+<span class="font-timer-display text-[10px] bg-surface-container-high px-1.5 py-0.5 rounded-full text-on-surface">8</span>
+</button>
+<button class="cat-pill bg-surface-container-low hover:bg-surface-container text-on-surface-variant px-3 py-1.5 rounded-full font-label-caps text-label-caps transition-all flex items-center gap-1.5" onclick="selectCategory(this)">
+<span>Books</span>
+<span class="font-timer-display text-[10px] bg-surface-container-high px-1.5 py-0.5 rounded-full text-on-surface">15</span>
+</button>
+<button class="cat-pill bg-surface-container-low hover:bg-surface-container text-on-surface-variant px-3 py-1.5 rounded-full font-label-caps text-label-caps transition-all flex items-center gap-1.5" onclick="selectCategory(this)">
+<span>Electronics</span>
+<span class="font-timer-display text-[10px] bg-surface-container-high px-1.5 py-0.5 rounded-full text-on-surface">7</span>
+</button>
+<button class="cat-pill bg-surface-container-low hover:bg-surface-container text-on-surface-variant px-3 py-1.5 rounded-full font-label-caps text-label-caps transition-all flex items-center gap-1.5" onclick="selectCategory(this)">
+<span>Furniture</span>
+<span class="font-timer-display text-[10px] bg-surface-container-high px-1.5 py-0.5 rounded-full text-on-surface">4</span>
+</button>
+<button class="cat-pill bg-surface-container-low hover:bg-surface-container text-on-surface-variant px-3 py-1.5 rounded-full font-label-caps text-label-caps transition-all flex items-center gap-1.5" onclick="selectCategory(this)">
+<span>Hostel Essentials</span>
+<span class="font-timer-display text-[10px] bg-surface-container-high px-1.5 py-0.5 rounded-full text-on-surface">11</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Section 1: Closing Soon (Next 2 Hours) -->
+<section class="mt-space-xl flex flex-col gap-space-md">
+<!-- Section Alert Header Banner -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm bg-error-container/40 p-space-md rounded-xl">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-error-container flex items-center justify-center text-on-error-container shadow-sm">
+<span class="material-symbols-outlined text-2xl animate-pulse">timer</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">Closing Soon</h2>
+<span class="font-label-caps text-label-caps bg-error text-on-error px-2 py-0.5 rounded uppercase tracking-wider">Next 2 Hours</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Active peer bids concluding before evening hostel roll call. Outbid notices update in real-time.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-timer-display text-timer-display text-on-error-container bg-surface-container-lowest px-3 py-1.5 rounded-lg shadow-sm font-semibold flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+<span>4 Critical Lots</span>
+</span>
+</div>
+</div>
+<!-- Live Auction Urgent Grid (4 items) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-gutter-desktop">
+<!-- Card 1: Hero Sprint 26T Mountain Bicycle -->
+<article class="group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col overflow-hidden relative">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A clean matte black Hero Sprint 26T mountain bicycle parked against an academic brick hostel wall in bright daylight. The bike has fresh brake pads, dual mudguards, and an attached front basket. Professional documentary photograph, high detail, balanced natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOfmxNPPvM0955_XLvHxP-2bSGzKLyhT4DJUwYfFM32cqsIM7210QSBr6aAob-b8i8KvTljikymiul2jO8ab8QwXO54Zgj6tMXYNP1Sx4pLCsbH3Q3SlNeDnydgoJBx8x2zolgMq0vgKrxxKKLdM2u00i4j-XdVqqzb7HiLQfMgxiku67bpf5HVdFTKyJW3q9vLUJTW_02CYfbEikSTFrLf2Dy0smqwYQhcqNmhIq6"/>
+<!-- Countdown Badge Pill -->
+<div class="absolute top-2.5 left-2.5 bg-surface-container-lowest/95 backdrop-blur-sm px-2.5 py-1 rounded-md shadow-sm flex items-center gap-1.5 text-on-surface">
+<span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+<span class="font-timer-display text-timer-display font-bold text-amber-700">00:12:35</span>
+</div>
+<!-- Watchlist Heart -->
+<button class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center shadow-sm hover:bg-surface-container-lowest transition-colors" onclick="toggleWatchlist(this)" title="Save to Watchlist">
+<span class="material-symbols-outlined text-on-surface-variant text-lg" data-active="false">favorite</span>
+</button>
+<!-- Category Chip -->
+<div class="absolute bottom-2.5 left-2.5 bg-inverse-surface/85 backdrop-blur-sm text-inverse-on-surface px-2 py-0.5 rounded font-label-caps text-label-caps uppercase tracking-wider">
+            Cycles • Good Condition
+          </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold group-hover:text-primary transition-colors line-clamp-1">
+              Hero Sprint 26T Mountain Bicycle
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dual V-brakes tuned yesterday at Central Workshop. Smooth 18-speed shifting.</p>
+<!-- Seller Micro-Card -->
+<div class="mt-2 flex items-center gap-2 bg-surface-container-low px-2.5 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-base" style="font-variation-settings: 'FILL' 1;">school</span>
+<div class="flex flex-col leading-tight min-w-0">
+<span class="font-label-caps text-label-caps text-on-surface font-bold truncate">Arun K. • Final Year Mech</span>
+<span class="font-body-sm text-[11px] text-tertiary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">verified</span> Verified Member
+                </span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-2 bg-surface-container-lowest">
+<div class="flex items-baseline justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Current Leading Bid</span>
+<span class="font-bid-numeral-lg text-bid-numeral-lg text-primary font-bold">₹1,450</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Starting</span>
+<span class="font-timer-display text-body-sm text-on-surface-variant font-medium">₹1,000 (4 bids)</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 mt-1">
+<button class="bg-surface-container text-on-surface hover:bg-surface-container-high font-headline-sm text-body-sm py-2 rounded-lg transition-colors flex items-center justify-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-base">visibility</span> Details
+              </button>
+<button class="bg-primary-container text-on-primary hover:opacity-95 font-headline-sm text-body-sm py-2 rounded-lg transition-opacity flex items-center justify-center gap-1 shadow-sm font-semibold">
+<span class="material-symbols-outlined text-base">gavel</span> Place Bid
+              </button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 2: Casio FX-991EX ClassWiz -->
+<article class="group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col overflow-hidden relative">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A pristine Casio FX-991EX ClassWiz scientific calculator resting on a clean wooden study desk alongside an engineering drawing sheet. The high-resolution LCD screen is turned on showing matrix equations. Studio college setting, clean bright natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACl0mNY6uyHmCXnWRk7bLMsK46LJopk_qAXNmnBdgXaUgtR2BTWJHoQgYjYCEGfxT2zvWLjc1ZbLBMxyVpWhGNzrgvqPgv2kJ2CavezFpR7GETJ57Cc-qJ6MOgBQMG6Z32BUxlxPfbOUR0qRQxzW3lI6gGXYZNQUullpvq5aspy8sRhkrl8KTJsIqFz3maAP3prZAwo-K3Ctcy765FdlIdnJFiDdy-QZuCS-VXG06t"/>
+<!-- Pulsing Urgent Amber Pill -->
+<div class="absolute top-2.5 left-2.5 bg-amber-100 text-amber-900 px-2.5 py-1 rounded-md shadow-sm flex items-center gap-1.5 animate-pulse">
+<span class="material-symbols-outlined text-sm font-bold">warning</span>
+<span class="font-timer-display text-timer-display font-bold">00:04:18</span>
+</div>
+<button class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center shadow-sm hover:bg-surface-container-lowest transition-colors" onclick="toggleWatchlist(this)" title="Save to Watchlist">
+<span class="material-symbols-outlined text-on-surface-variant text-lg" data-active="false">favorite</span>
+</button>
+<div class="absolute bottom-2.5 left-2.5 bg-inverse-surface/85 backdrop-blur-sm text-inverse-on-surface px-2 py-0.5 rounded font-label-caps text-label-caps uppercase tracking-wider">
+            Calculators • Like New
+          </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold group-hover:text-primary transition-colors line-clamp-1">
+              Casio FX-991EX ClassWiz
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">552 functions, QR code generator, dual battery &amp; solar. Essential for sem exams.</p>
+<div class="mt-2 flex items-center gap-2 bg-surface-container-low px-2.5 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-base" style="font-variation-settings: 'FILL' 1;">school</span>
+<div class="flex flex-col leading-tight min-w-0">
+<span class="font-label-caps text-label-caps text-on-surface font-bold truncate">Priya M. • ECE '24</span>
+<span class="font-body-sm text-[11px] text-tertiary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">verified</span> Verified Member
+                </span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-2 bg-surface-container-lowest">
+<div class="flex items-baseline justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Current Leading Bid</span>
+<span class="font-bid-numeral-lg text-bid-numeral-lg text-primary font-bold">₹320</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Activity</span>
+<span class="font-timer-display text-body-sm text-on-surface-variant font-medium">3 bids active</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 mt-1">
+<button class="bg-surface-container text-on-surface hover:bg-surface-container-high font-headline-sm text-body-sm py-2 rounded-lg transition-colors flex items-center justify-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-base">visibility</span> Details
+              </button>
+<button class="bg-primary-container text-on-primary hover:opacity-95 font-headline-sm text-body-sm py-2 rounded-lg transition-opacity flex items-center justify-center gap-1 shadow-sm font-semibold">
+<span class="material-symbols-outlined text-base">gavel</span> Place Bid
+              </button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 3: Engineering Mathematics (B.S. Grewal) -->
+<article class="group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col overflow-hidden relative">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Thick hardcover Higher Engineering Mathematics book by B.S. Grewal with neatly flagged sticky notes on calculus and differential equations chapters, placed next to a student pencil pouch on a dormitory desk. Crisp textbook photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5dXjK3SKc9vkXDAT0XyESLc2KzTHRmsJHyjMthblu_U9Bx3BtmtCOfsMVf4qcSW0Z7a-94Jqsu_vqrbgHeJL2Gv_r-ZFv-DU8dBFzL5l-YC60VYVMY_T9WDCYv2UeFipWbQ0aR7snB09FrwhgW2rjvFIX1jnDcvhIrjYL5Q5dMxoeAnk_5xqgCz5qBk3WHbs-syssyL5DA5_5paeY5mduZxU5FwkTGmM-Mke82nCa"/>
+<div class="absolute top-2.5 left-2.5 bg-surface-container-lowest/95 backdrop-blur-sm px-2.5 py-1 rounded-md shadow-sm flex items-center gap-1.5 text-on-surface">
+<span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+<span class="font-timer-display text-timer-display font-bold text-amber-700">00:22:40</span>
+</div>
+<button class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center shadow-sm hover:bg-surface-container-lowest transition-colors" onclick="toggleWatchlist(this)" title="Save to Watchlist">
+<span class="material-symbols-outlined text-on-surface-variant text-lg" data-active="false">favorite</span>
+</button>
+<div class="absolute bottom-2.5 left-2.5 bg-inverse-surface/85 backdrop-blur-sm text-inverse-on-surface px-2 py-0.5 rounded font-label-caps text-label-caps uppercase tracking-wider">
+            Books • Marked Formulas
+          </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold group-hover:text-primary transition-colors line-clamp-1">
+              Higher Engg. Math (B.S. Grewal)
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Volumes I &amp; II compilation. Solved previous 5-year university exam problems included.</p>
+<div class="mt-2 flex items-center gap-2 bg-surface-container-low px-2.5 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-base" style="font-variation-settings: 'FILL' 1;">school</span>
+<div class="flex flex-col leading-tight min-w-0">
+<span class="font-label-caps text-label-caps text-on-surface font-bold truncate">Deepak V. • CSE '24</span>
+<span class="font-body-sm text-[11px] text-tertiary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">verified</span> Verified Member
+                </span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-2 bg-surface-container-lowest">
+<div class="flex items-baseline justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Current Leading Bid</span>
+<span class="font-bid-numeral-lg text-bid-numeral-lg text-primary font-bold">₹180</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Activity</span>
+<span class="font-timer-display text-body-sm text-on-surface-variant font-medium">2 bids active</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 mt-1">
+<button class="bg-surface-container text-on-surface hover:bg-surface-container-high font-headline-sm text-body-sm py-2 rounded-lg transition-colors flex items-center justify-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-base">visibility</span> Details
+              </button>
+<button class="bg-primary-container text-on-primary hover:opacity-95 font-headline-sm text-body-sm py-2 rounded-lg transition-opacity flex items-center justify-center gap-1 shadow-sm font-semibold">
+<span class="material-symbols-outlined text-base">gavel</span> Place Bid
+              </button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 4: Ant Esports Mechanical Gaming Keyboard -->
+<article class="group bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col overflow-hidden relative">
+<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="An Ant Esports mechanical gaming keyboard with tactile blue clicky switches, subtle RGB backlighting glow, and double-shot keycaps situated on a dark desk mat. Clean tech setup photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn7KkGvRUi1E70IK0jPKtRRTmpSPdsqha9T4rHo-NgZ0pC_P9cp83t9F4Bz5X2YgJoA9Z3IjJls5r_KoNWtgC1X3KPj-9nPwzUZS34vr6H5Avu9dHZ_n72rTivqpIeGdZhp1OyO5Qsiw8OMmSlq_Uodhu5U25aOILz1zpUnBaDNlz2Kn4nrGrm9_61UEi2--6tDVCpC1fmdEwsQ2x0S-Ilfds01TD_OHeIpCLIncFB"/>
+<div class="absolute top-2.5 left-2.5 bg-surface-container-lowest/95 backdrop-blur-sm px-2.5 py-1 rounded-md shadow-sm flex items-center gap-1.5 text-on-surface">
+<span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+<span class="font-timer-display text-timer-display font-bold text-amber-700">01:15:20</span>
+</div>
+<button class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center shadow-sm hover:bg-surface-container-lowest transition-colors" onclick="toggleWatchlist(this)" title="Save to Watchlist">
+<span class="material-symbols-outlined text-on-surface-variant text-lg" data-active="false">favorite</span>
+</button>
+<div class="absolute bottom-2.5 left-2.5 bg-inverse-surface/85 backdrop-blur-sm text-inverse-on-surface px-2 py-0.5 rounded font-label-caps text-label-caps uppercase tracking-wider">
+            Electronics • Blue Switches
+          </div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold group-hover:text-primary transition-colors line-clamp-1">
+              Ant Esports Mechanical Keyboard
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Blue mechanical switches, full anti-ghosting keys, braided USB-C cable included.</p>
+<div class="mt-2 flex items-center gap-2 bg-surface-container-low px-2.5 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-base" style="font-variation-settings: 'FILL' 1;">school</span>
+<div class="flex flex-col leading-tight min-w-0">
+<span class="font-label-caps text-label-caps text-on-surface font-bold truncate">Kartik N. • Dual Degree</span>
+<span class="font-body-sm text-[11px] text-tertiary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">verified</span> Verified Member
+                </span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-2 bg-surface-container-lowest">
+<div class="flex items-baseline justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Current Leading Bid</span>
+<span class="font-bid-numeral-lg text-bid-numeral-lg text-primary font-bold">₹850</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Activity</span>
+<span class="font-timer-display text-body-sm text-on-surface-variant font-medium">5 bids active</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 mt-1">
+<button class="bg-surface-container text-on-surface hover:bg-surface-container-high font-headline-sm text-body-sm py-2 rounded-lg transition-colors flex items-center justify-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-base">visibility</span> Details
+              </button>
+<button class="bg-primary-container text-on-primary hover:opacity-95 font-headline-sm text-body-sm py-2 rounded-lg transition-opacity flex items-center justify-center gap-1 shadow-sm font-semibold">
+<span class="material-symbols-outlined text-base">gavel</span> Place Bid
+              </button>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Section 2: Recently Listed on Campus (Asymmetrical 3-Column Bento Showcase) -->
+<section class="mt-space-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">Recently Listed on Campus</h2>
+<span class="bg-secondary-container text-on-secondary-fixed font-label-caps text-label-caps px-2 py-0.5 rounded font-bold">Fresh Lots</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Straight from graduating seniors and campus hostel relocations.</p>
+</div>
+<a class="font-headline-sm text-body-sm text-primary hover:underline flex items-center gap-1 font-semibold" href="#">
+<span>View All Recent (34)</span>
+<span class="material-symbols-outlined text-base">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter-desktop">
+<!-- Recent Item 1: Foldable Study Table & Chair (Wide Feature) -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-3">
+<div class="relative w-full h-48 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Solid wood foldable study table accompanied by a breathable black ergonomic mesh desk chair in a cozy university hostel room corner. Warm afternoon sunlight streaming in. Aesthetic and functional campus dorm lifestyle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjKEob-QCWltYnKHXjCKLUWXfc84lqyZdGFgB022B_1F1rh2EzgZoTARI03DYjr_BdqWNBkuiVqFN07taMtNpPzaqU_Gsjl9FEZ8zo9-37E2SV3wKLviN6M3zQLvhbO4jyuIEK5Md1t2oPuqJeOCX5UAJ_Fr5k6-I2cHqFtX9D5OvK9ZQqbnG-uwf5LwbTnRm2jfn8kWG0dUUDvUZq7_3WPC5LfgWmCTURdSfSEbzv"/>
+<div class="absolute top-2 left-2 bg-surface-container-lowest/90 px-2 py-1 rounded font-timer-display text-body-sm text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">schedule</span>
+<span>Closes in 2 days</span>
+</div>
+<div class="absolute top-2 right-2 bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded font-label-caps text-label-caps font-bold">
+              No Bids Yet
+            </div>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-wider">Hostel Furniture Set</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mt-0.5">
+              Foldable Wooden Study Table &amp; Ergonomic Mesh Chair
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Table fits easily behind dorm beds. Chair features adjustable lumbar support and smooth casters.
+            </p>
+</div>
+</div>
+<div class="flex flex-col gap-3 bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-xs text-on-surface">SR</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface font-bold">Sneha R.</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Biotech Dept</span>
+</div>
+</div>
+<span class="font-label-caps text-label-caps bg-tertiary-container text-on-tertiary-container px-2 py-0.5 rounded font-semibold">Be the first bidder!</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Starting Floor</span>
+<span class="font-bid-numeral-md text-bid-numeral-md text-on-surface font-bold">₹500</span>
+</div>
+<button class="bg-primary-container text-on-primary hover:opacity-95 px-4 py-2 rounded-lg font-headline-sm text-body-sm font-semibold transition-opacity flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-base">pan_tool_alt</span> Open Bid
+            </button>
+</div>
+</div>
+</article>
+<!-- Recent Item 2: Arduino Uno + Sensor Lab Starter Kit -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-3">
+<div class="relative w-full h-48 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="An organized transparent component case containing an Arduino Uno R3 development board, jumper wires, breadboard, ultrasonic sensors, and assorted electronics parts neatly arranged on an electrical engineering lab workbench." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLQbBj0KajHh3BX9P2S46G7QZSlKZVLJAj0STfbOKpWlc7cD_5NBC4ExyDmtn_afAVKpP3KENBiheJNOhFZl5z-hvVp-JRRFQVRLrzcuP04IMKJkYlaTN6jw8TFOrCZTxhUKZWUYI9FSbKKEkaS5pNsjX_Fh_VNTuRjKRHPBY-uZc-hwoarpO6DuiLXxYPI1bXD2sHDnYRhwo2-t0AGiHHpaae8OOyBvxNM6F7nSkh"/>
+<div class="absolute top-2 left-2 bg-surface-container-lowest/90 px-2 py-1 rounded font-timer-display text-body-sm text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">schedule</span>
+<span>18h 30m left</span>
+</div>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-wider">Lab Gear &amp; Robotics</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mt-0.5">
+              Arduino Uno + Sensor Lab Starter Kit
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Complete sensor assortment (DHT11, Ultrasonic, Servo). Ideal for 2nd year IoT &amp; Microcontroller lab course.
+            </p>
+</div>
+</div>
+<div class="flex flex-col gap-3 bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-xs text-on-surface">RT</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface font-bold">Ravi T.</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">EE '25</span>
+</div>
+</div>
+<span class="font-body-sm text-[11px] text-on-secondary-fixed font-semibold">2 Active Bids</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Leading Offer</span>
+<span class="font-bid-numeral-md text-bid-numeral-md text-primary font-bold">₹240</span>
+</div>
+<button class="bg-primary-container text-on-primary hover:opacity-95 px-4 py-2 rounded-lg font-headline-sm text-body-sm font-semibold transition-opacity flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-base">gavel</span> Place ₹260
+            </button>
+</div>
+</div>
+</article>
+<!-- Recent Item 3: Bajaj 1500W Electric Kettle -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-3">
+<div class="relative w-full h-48 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A stainless steel Bajaj 1.5-liter electric cordless kettle on a hostel room tea prep counter with clean ceramic mugs nearby. Stainless finish polished and cleanly maintained." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8psxoW8LiwHwc08u0EZSXMCM749VvE9OJjp5YHMh-E4Ec9Q03-9_jnDfDz4khviBc9EQ4oFzQY2APZ7v2fEWiNmWiNsMwDrHxg3xfT9qWdVdJN0PdMMwVlWXM9PxBqf6sNZA2H5urg6sjiqmVx2eUURBOaMiQXiIaPVY_fOTS14SEN-jls7kRNEV2-bKmuXH51tRpkA8PsRwp68m5qMVUzb1JbGZuflSFWxARL520"/>
+<div class="absolute top-2 left-2 bg-surface-container-lowest/90 px-2 py-1 rounded font-timer-display text-body-sm text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">schedule</span>
+<span>5h 10m left</span>
+</div>
+<div class="absolute top-2 right-2 bg-primary-fixed text-on-primary-fixed px-2 py-0.5 rounded font-label-caps text-label-caps font-bold">
+              Popular Lot
+            </div>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-wider">Hostel Appliances</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mt-0.5">
+              Bajaj 1500W Electric Kettle (1.5L)
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Rapid boiling, auto shut-off, concealed heating element. Survives midnight exam cram sessions.
+            </p>
+</div>
+</div>
+<div class="flex flex-col gap-3 bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-xs text-on-surface">MK</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface font-bold">Manish K.</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Civil '24</span>
+</div>
+</div>
+<span class="font-body-sm text-[11px] text-tertiary font-semibold">6 Bids Logged</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Current Leading Bid</span>
+<span class="font-bid-numeral-md text-bid-numeral-md text-primary font-bold">₹450</span>
+</div>
+<button class="bg-primary-container text-on-primary hover:opacity-95 px-4 py-2 rounded-lg font-headline-sm text-body-sm font-semibold transition-opacity flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-base">gavel</span> Place ₹480
+            </button>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Section 3: Campus Giveaways & ₹0 - ₹99 Low-Cost Shelf -->
+<section class="mt-space-xl mb-space-lg flex flex-col gap-space-md">
+<div class="bg-surface-container-high/60 rounded-2xl p-space-lg lg:p-space-xl flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-container text-2xl">volunteer_activism</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">Campus Giveaways &amp; Under ₹99 Shelf</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            Pass-it-on supplies from graduating batches. Subsidized or token-priced so every incoming freshman gets equipped on day one.
+          </p>
+</div>
+<div class="inline-flex items-center gap-2 bg-surface-container-lowest px-3 py-1.5 rounded-lg shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="font-label-caps text-label-caps text-on-surface uppercase font-bold">100% Peer Verified Items</span>
+</div>
+</div>
+<!-- Quick Compact Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Shelf Item 1: Lab Coat -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex items-center gap-space-sm hover:shadow-md transition-shadow">
+<div class="w-20 h-20 rounded-lg overflow-hidden bg-surface-container flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A clean, washed white cotton laboratory coat neatly folded with university chemistry department embroidery badge." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBU6Xvw-0lnk-qpCas4FXBoygKiamKp9JjASdfdXx5nm1XaeufURLI_T0UvPSuGiUlPs9_Om0yMdUOVQRPNtoLOxNDREkx4av1-DzxTd_5uBkmIhsBBw9TZwzfLMc-7uv8tl5opudPgz7wEXSDFvxTP6JzMTRls2aoSNmHZIeULya2vrHg80ZRlEOy1ToEyJI-diGdxWMQbq5ODxBtVFvzm7XXFYksRnQevCLMmWhI"/>
+</div>
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<div>
+<span class="font-label-caps text-[10px] text-tertiary uppercase font-bold">Chemistry / Biotech Lab</span>
+<h4 class="font-headline-sm text-body-sm font-bold text-on-surface truncate">Cotton Lab Coat (Size L)</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant truncate">Freshly laundered, button intact</p>
+</div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-bid-numeral-md text-bid-numeral-md text-tertiary font-bold">₹50</span>
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface font-headline-sm text-[12px] px-2.5 py-1 rounded transition-colors font-semibold">
+                Claim Lot
+              </button>
+</div>
+</div>
+</div>
+<!-- Shelf Item 2: Engineering Drafter -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex items-center gap-space-sm hover:shadow-md transition-shadow">
+<div class="w-20 h-20 rounded-lg overflow-hidden bg-surface-container flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="An Omega mechanical mini engineering drafter tool with clamp and dual scales, inside its original black zippered protective sleeve." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5xlWg7MWLtl0UBMkzeZwlBq181F9UXdjy4MyRmaAupkwXkYO7flf8zC9s4J_2suuJWf4nv6487x-WD7Gm0KuFr4_zMVBv3qlofC91KcWb_z0wzE-NRV5bEExRWO5JYZhGeRFoHhCL68sqaMUu4CUwi5YkP3U-MWqJBb_t8cYPbxzpfFjxFzys_sU5RFGKOl8Ql0J3HIZCtjY2qzJEMyJWmO8urzbFWwjoX0Ko5MNp"/>
+</div>
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<div>
+<span class="font-label-caps text-[10px] text-tertiary uppercase font-bold">Mech / Civil 1st Year</span>
+<h4 class="font-headline-sm text-body-sm font-bold text-on-surface truncate">Mini Drafter &amp; Sheet Clips</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant truncate">Scale markings 100% visible</p>
+</div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-bid-numeral-md text-bid-numeral-md text-tertiary font-bold">₹80</span>
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface font-headline-sm text-[12px] px-2.5 py-1 rounded transition-colors font-semibold">
+                Claim Lot
+              </button>
+</div>
+</div>
+</div>
+<!-- Shelf Item 3: Badminton Racquets -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex items-center gap-space-sm hover:shadow-md transition-shadow">
+<div class="w-20 h-20 rounded-lg overflow-hidden bg-surface-container flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A pair of Yonex aluminum badminton racquets with fresh blue grip tape resting together on an indoor sports wooden gym court." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN0FUt3FupEHKEuDW2500mmRdq7qtsKq-TQsjzt9Y0n3RPN3Us_kMp0fv1WekvAFnHDHWmc2S6BD5PryCjnhuX6DufSZvg4wAGiM4aotrTTC-RL4xEDD8QcN_V4bcJ7B1qTovA6yhH2elIMnWGjadDtxVxsXx-rOOaCGW6ACIfE41sFUnkE8HE_Nak5q57-fgaWkzWxkKDoZ_kmA_D5Kx5Q4EC0XuF6q-FBNFDKKI3"/>
+</div>
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<div>
+<span class="font-label-caps text-[10px] text-tertiary uppercase font-bold">Campus Gymkhana</span>
+<h4 class="font-headline-sm text-body-sm font-bold text-on-surface truncate">Dual Badminton Racquets</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant truncate">Fresh overgrip, strung taut</p>
+</div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-bid-numeral-md text-bid-numeral-md text-tertiary font-bold">₹90</span>
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface font-headline-sm text-[12px] px-2.5 py-1 rounded transition-colors font-semibold">
+                Claim Lot
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main></div></body></html>

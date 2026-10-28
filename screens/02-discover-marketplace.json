@@ -1,0 +1,17 @@
+{
+  "deviceType": "DESKTOP",
+  "height": "4160",
+  "htmlCode": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/15375059538578470502/files/ea6b131093f94e0b921be6c77638324b:download",
+    "mimeType": "text/html",
+    "name": "projects/15375059538578470502/screens/ea6b131093f94e0b921be6c77638324b/fileEntries/html"
+  },
+  "name": "projects/15375059538578470502/screens/ea6b131093f94e0b921be6c77638324b",
+  "screenshot": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/15375059538578470502/files/screenshot_00065edf093f048e0332ebc448110dfd:download",
+    "mimeType": "image/png",
+    "name": "projects/15375059538578470502/screens/ea6b131093f94e0b921be6c77638324b/fileEntries/screenshot"
+  },
+  "title": "Discover Marketplace - Campus Auction",
+  "width": "2560"
+}

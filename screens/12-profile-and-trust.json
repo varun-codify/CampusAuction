@@ -1,0 +1,17 @@
+{
+  "deviceType": "DESKTOP",
+  "height": "4746",
+  "htmlCode": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/15375059538578470502/files/999c388fd6a04c8689cb751f6291b429:download",
+    "mimeType": "text/html",
+    "name": "projects/15375059538578470502/screens/999c388fd6a04c8689cb751f6291b429/fileEntries/html"
+  },
+  "name": "projects/15375059538578470502/screens/999c388fd6a04c8689cb751f6291b429",
+  "screenshot": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/15375059538578470502/files/screenshot_00065edf67634b120925d49a1d00cee0:download",
+    "mimeType": "image/png",
+    "name": "projects/15375059538578470502/screens/999c388fd6a04c8689cb751f6291b429/fileEntries/screenshot"
+  },
+  "title": "Profile & Trust - Campus Auction",
+  "width": "2560"
+}

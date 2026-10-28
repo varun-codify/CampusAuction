@@ -1,0 +1,17 @@
+{
+  "deviceType": "DESKTOP",
+  "height": "3506",
+  "htmlCode": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/15375059538578470502/files/5fc38aed366e4d9cb2984eb90283a1fa:download",
+    "mimeType": "text/html",
+    "name": "projects/15375059538578470502/screens/5fc38aed366e4d9cb2984eb90283a1fa/fileEntries/html"
+  },
+  "name": "projects/15375059538578470502/screens/5fc38aed366e4d9cb2984eb90283a1fa",
+  "screenshot": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/15375059538578470502/files/screenshot_00065edf6690e9a10503c03dac2ab3d6:download",
+    "mimeType": "image/png",
+    "name": "projects/15375059538578470502/screens/5fc38aed366e4d9cb2984eb90283a1fa/fileEntries/screenshot"
+  },
+  "title": "Notifications - Campus Auction",
+  "width": "2560"
+}

@@ -1,0 +1,17 @@
+{
+  "deviceType": "DESKTOP",
+  "height": "4640",
+  "htmlCode": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/15375059538578470502/files/c50f69f2f73a45ab9b59d31aca036a25:download",
+    "mimeType": "text/html",
+    "name": "projects/15375059538578470502/screens/c50f69f2f73a45ab9b59d31aca036a25/fileEntries/html"
+  },
+  "name": "projects/15375059538578470502/screens/c50f69f2f73a45ab9b59d31aca036a25",
+  "screenshot": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/15375059538578470502/files/screenshot_00065edf67717a1c073aec17f9203d82:download",
+    "mimeType": "image/png",
+    "name": "projects/15375059538578470502/screens/c50f69f2f73a45ab9b59d31aca036a25/fileEntries/screenshot"
+  },
+  "title": "Admin Moderation - Campus Auction",
+  "width": "2560"
+}

@@ -1,0 +1,17 @@
+{
+  "deviceType": "DESKTOP",
+  "height": "2884",
+  "htmlCode": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/15375059538578470502/files/23acf025c9434a149faa0a58fa117966:download",
+    "mimeType": "text/html",
+    "name": "projects/15375059538578470502/screens/23acf025c9434a149faa0a58fa117966/fileEntries/html"
+  },
+  "name": "projects/15375059538578470502/screens/23acf025c9434a149faa0a58fa117966",
+  "screenshot": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/15375059538578470502/files/screenshot_00065edf3ac7de0d07799fc9ea02d890:download",
+    "mimeType": "image/png",
+    "name": "projects/15375059538578470502/screens/23acf025c9434a149faa0a58fa117966/fileEntries/screenshot"
+  },
+  "title": "My Watchlist - Campus Auction",
+  "width": "2560"
+}

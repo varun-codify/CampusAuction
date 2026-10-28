@@ -1,0 +1,17 @@
+{
+  "deviceType": "DESKTOP",
+  "height": "4072",
+  "htmlCode": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/15375059538578470502/files/971d8b22c0a84c738865c101510a1aeb:download",
+    "mimeType": "text/html",
+    "name": "projects/15375059538578470502/screens/971d8b22c0a84c738865c101510a1aeb/fileEntries/html"
+  },
+  "name": "projects/15375059538578470502/screens/971d8b22c0a84c738865c101510a1aeb",
+  "screenshot": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/15375059538578470502/files/screenshot_00065edf637b72f6089af7e9ad1eea08:download",
+    "mimeType": "image/png",
+    "name": "projects/15375059538578470502/screens/971d8b22c0a84c738865c101510a1aeb/fileEntries/screenshot"
+  },
+  "title": "Questions & Answers - Campus Auction",
+  "width": "2560"
+}

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-error":"#ffffff","tertiary-fixed":"#85f8c4","tertiary":"#00442d","on-error-container":"#93000a","primary-fixed-dim":"#c3c0ff","surface-tint":"#5148d7","on-primary-fixed-variant":"#372abf","primary":"#2a14b4","surface-container-low":"#eff4ff","on-surface-variant":"#464554","on-tertiary-fixed":"#002114","outline-variant":"#c7c4d7","surface-container-lowest":"#ffffff","on-tertiary":"#ffffff","on-secondary-fixed-variant":"#3f465c","inverse-surface":"#213145","on-secondary-container":"#5c647a","surface":"#f8f9ff","tertiary-container":"#005e40","secondary-fixed-dim":"#bec6e0","surface-container-high":"#dce9ff","on-background":"#0b1c30","on-primary-container":"#c1beff","surface-container-highest":"#d3e4fe","secondary-fixed":"#dae2fd","on-tertiary-container":"#66daa8","primary-container":"#4338ca","surface-bright":"#f8f9ff","on-primary-fixed":"#100069","surface-dim":"#cbdbf5","on-tertiary-fixed-variant":"#005137","on-surface":"#0b1c30","inverse-on-surface":"#eaf1ff","error-container":"#ffdad6","background":"#f8f9ff","secondary-container":"#dae2fd","on-secondary":"#ffffff","outline":"#777586","error":"#ba1a1a","surface-container":"#e5eeff","surface-variant":"#d3e4fe","on-primary":"#ffffff","primary-fixed":"#e3dfff","inverse-primary":"#c3c0ff","on-secondary-fixed":"#131b2e","tertiary-fixed-dim":"#68dba9","secondary":"#565e74"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-md":"1rem","space-lg":"1.5rem","space-xl":"2.5rem","margin-desktop":"3rem","margin":"1rem","gutter":"1.25rem","gutter-desktop":"2rem","space-sm":"0.5rem","space-xs":"0.25rem"},fontFamily:{"bid-numeral-lg":["JetBrains Mono"],"body-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"timer-display":["JetBrains Mono"],"display-lg-mobile":["Plus Jakarta Sans"],"label-caps":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"bid-numeral-md":["JetBrains Mono"],"headline-xl":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"]},fontSize:{"bid-numeral-lg":["28px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["15px",{"lineHeight":"22px","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"timer-display":["14px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-lg-mobile":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"800"}],"label-caps":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"700"}],"headline-xl-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"display-lg":["44px",{"lineHeight":"52px","letterSpacing":"-0.03em","fontWeight":"800"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"bid-numeral-md":["18px",{"lineHeight":"22px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-[68px] bg-surface-container-lowest z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-space-md lg:px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm min-w-[240px]"><img alt="Campus Auction Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WmTRQheuLZhejcdh1u0Rznffh09fF09dc4AzWw1Uk3aLVHkuu6mmZGqOp0UzAzjBTpmW5e-iV068XESYAj5yAP2jVjD_RqRt_hXyDZJeFFPlszQmOw0VsaTMuitB0J3JWAN1RM8J476ERTPGRaV7sLo9imsy5ZM62tneuww4hOAE9qh7f9WT8IzmtR7kb284p6-xyfL_0fujvu_1olrN5RlTU7ERsWdH6zm69_Tx9R"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight font-bold">Campus Auction</span><span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">IIT / NIT Campus Hub</span></div></div><div class="flex-1 max-w-2xl hidden md:flex items-center"><div class="w-full flex items-center bg-surface-container-low rounded-lg px-space-sm py-1.5 focus-within:bg-surface-container-lowest transition-colors"><span class="material-symbols-outlined text-on-surface-variant text-xl mr-space-xs">search</span><input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none" placeholder="Find something for your campus... (cycles, calculators, books)" type="text"/><div class="flex items-center gap-1 pl-space-xs border-l border-outline-variant/30"><button class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface flex items-center gap-0.5 px-space-xs py-0.5 rounded"><span class="font-medium">All</span><span class="material-symbols-outlined text-sm">expand_more</span></button></div></div></div><div class="flex items-center gap-space-md justify-end"><div class="hidden xl:flex items-center gap-1.5 bg-secondary-container/60 px-space-sm py-1 rounded-full text-on-secondary-fixed"><span class="material-symbols-outlined text-primary text-base font-bold">verified</span><span class="font-label-caps text-label-caps font-semibold">Verified Member</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 bg-error text-on-error font-timer-display text-[10px] rounded-full flex items-center justify-center font-bold leading-none">3</span></button><a class="hidden sm:flex items-center gap-1.5 bg-primary-container text-on-primary font-headline-sm text-body-sm font-semibold px-space-md py-2 rounded-lg hover:opacity-95 transition-opacity shadow-sm" data-path="list-item" href="15-create-auction-listing.html"><span class="material-symbols-outlined text-lg leading-none">add</span><span>List an Item</span></a><div class="flex items-center gap-space-xs pl-space-xs cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABN9lhbKiE4bRMwKIzGlZE7jQ3pIqAiWsq0adriDxqACzKONcj7950ii5Wi82O79yS2nhc_iyq8bd_nSFAAqIFNAacCzDHGPigrcHsNSgUujSPSGI95Z3xlEJkEMOfwFa3VsniAN9T6QXJf0iw2CNFJ40IA2cIJXFjtdXARKsFPD7jh1vb_x-aajwhdhZ60-Pt24ldYsxHj0H0ChVrduOlmR13LrF87yJfCZ2zK8tu"/><div class="hidden lg:flex flex-col text-left"><span class="font-headline-sm text-body-sm font-semibold text-on-surface leading-tight">Rohan S.</span><span class="font-label-caps text-label-caps text-on-surface-variant">B.Tech '24</span></div><span class="material-symbols-outlined text-on-surface-variant text-base">expand_more</span></div></div></header><aside class="fixed left-0 top-[68px] bottom-0 w-[260px] bg-surface-container-lowest z-40 flex flex-col py-space-md overflow-y-auto"><div class="px-space-md pb-space-sm"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Main Navigation</span></div><nav class="px-space-sm flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="discover" href="02-discover-marketplace.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">explore</span><span>Discover / Home</span></div></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-2 rounded-lg transition-colors bg-primary-container text-on-primary font-semibold" data-path="browse-auctions" href="01-live-auction-hero-sprint-bicycle.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">gavel</span><span>Browse Auctions</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="my-bids" href="04-my-bids.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">pan_tool_alt</span><span>My Bids</span></div><span class="font-timer-display text-[11px] bg-secondary-container text-on-secondary-fixed font-bold px-1.5 py-0.5 rounded-full">2</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="my-watchlist" href="05-my-watchlist.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">bookmark</span><span>My Watchlist</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="saved-searches" href="06-saved-searches.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">saved_search</span><span>Saved Searches</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="ai-assistant" href="07-ai-assistant.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl text-primary">auto_awesome</span><span>AI Assistant</span></div><span class="font-label-caps text-[10px] bg-tertiary-fixed text-on-tertiary-fixed font-bold px-1.5 py-0.5 rounded">Smart</span></a></nav><div class="px-space-md pt-space-lg pb-space-sm"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Seller Hub</span></div><nav class="px-space-sm flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="my-listings" href="09-my-listings.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">inventory_2</span><span>My Listings</span></div><span class="font-label-caps text-[10px] bg-secondary-fixed text-on-secondary-fixed px-1.5 py-0.5 rounded font-medium">1 pending</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="seller-decisions" href="08-seller-decisions.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">fact_check</span><span>Seller Decisions</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="questions-and-answers" href="10-questions-and-answers.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">chat</span><span>Questions &amp; Answers</span></div></a></nav><div class="px-space-md pt-space-lg pb-space-sm"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Account &amp; Admin</span></div><nav class="px-space-sm flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="notifications" href="11-notifications.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">mail</span><span>Notifications</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="profile-and-trust" href="12-profile-and-trust.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">shield_person</span><span>Profile &amp; Trust</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="admin-moderation" href="13-admin-moderation.html"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-xl">security</span><span>Admin Moderation</span></div></a></nav></aside><div class="pl-[260px]"><main class="relative pt-[68px] min-h-screen bg-surface px-space-md lg:px-gutter-desktop py-space-lg"><div class="flex flex-col w-full">
+<!-- Fairness Banner -->
+<div class="w-full bg-secondary-container/50 px-space-md py-space-sm rounded-lg mb-space-md flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">gavel</span>
+<p class="font-body-sm text-body-sm text-on-secondary-fixed">
+<span class="font-semibold text-primary">Campus Fair-Play Guarantee:</span>
+        Every valid bid is recorded and visible to campus members. The auction closes strictly according to its displayed deadline.
+      </p>
+</div>
+<div class="hidden sm:flex items-center gap-1.5 text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+      Real-Time Sync Active
+    </div>
+</div>
+<!-- Dynamic Anti-Sniping Alert Banner (Live Simulation) -->
+<div class="hidden w-full bg-tertiary-container text-on-tertiary px-space-md py-space-sm rounded-lg mb-space-md shadow-sm transition-all duration-300" id="fairPlayAlert">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-xl text-tertiary-fixed">update</span>
+<span class="font-headline-sm text-headline-sm font-semibold">Fair-Play Anti-Snipe Triggered:</span>
+<span class="font-body-sm text-body-sm">A bid was placed in the final 30 seconds. Clock extended by exactly +60 seconds for verified contenders.</span>
+</div>
+<button class="text-on-tertiary hover:opacity-80 transition-opacity" onclick="dismissAntiSnipe()">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+</div>
+<!-- Top Breadcrumbs & Fast Metadata -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-lg">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-base">home</span>
+        Home
+      </a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Cycles &amp; Mobility</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="font-semibold text-on-surface">Hero Sprint 26T Mountain Bicycle</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-caps text-label-caps bg-surface-container-high text-on-surface-variant px-space-xs py-1 rounded">ITEM #AUC-2024-0482</span>
+<span class="font-label-caps text-label-caps bg-tertiary-fixed text-on-tertiary-fixed px-space-xs py-1 rounded font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">verified</span> IITKGP / MECH
+      </span>
+</div>
+</div>
+<!-- Main 12-Column Responsive Workspace -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+<!-- LEFT COLUMN: Product & Provenance Dossier (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Product Header & Badges -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-label-caps text-label-caps bg-secondary-fixed text-on-secondary-fixed px-2.5 py-1 rounded-full uppercase tracking-wider font-semibold">Cycles &amp; Commute</span>
+<span class="font-label-caps text-label-caps bg-tertiary-fixed text-on-tertiary-fixed px-2.5 py-1 rounded-full uppercase tracking-wider font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">check_circle</span> Condition: Good
+          </span>
+<span class="font-label-caps text-label-caps bg-surface-container text-on-secondary-container px-2.5 py-1 rounded-full">Dual Brakes Tuned</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface font-extrabold tracking-tight mt-1">
+          Hero Sprint 26T Mountain Bicycle
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Matte Black &amp; Cobalt Blue • Front Suspension • 18-Speed Shimano Tourney Drivetrain
+        </p>
+</div>
+<!-- Main Visual Showcase Gallery -->
+<div class="flex flex-col gap-space-sm">
+<div class="relative w-full aspect-[16/10] bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="High angle crisp studio shot of a rugged matte black and cobalt blue 26T mountain bicycle with dual disc brakes and knobby off-road tires, set against a warm collegiate courtyard pavement with soft natural sunlight." id="mainGalleryImage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKkiZwb5SH_kXuA1ob9FMUQ1iNxXCQiwvhSNi5h64rg6iZPV6OpcjADR0lMqqW8hOaExZkRTqVdrwsx8otctHCND3rCwMTIsrLxTdzyY8uoz5GlchGInGHlYlvrfZNb4Gifj0Kgoc6LalYZ1cWlPn6180HpTR-XaS_C1X6qCYM8F9QACANurz7jjvvBfu3rIjs2vv66DMXtEekg0pm6FcubhEBAGfS3bir4uoEyp5z"/>
+<div class="absolute top-space-sm left-space-sm flex flex-col gap-1.5">
+<span class="bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded text-on-surface font-label-caps text-label-caps font-bold shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary">center_focus_strong</span> 4 Verified Inspect Photos
+            </span>
+</div>
+<div class="absolute bottom-space-sm right-space-sm bg-inverse-surface/85 backdrop-blur-md text-inverse-on-surface font-label-caps text-label-caps px-2.5 py-1 rounded shadow-sm">
+            Original Campus Photo • May 2024
+          </div>
+</div>
+<!-- Thumbnail Gallery Strip -->
+<div class="grid grid-cols-4 gap-space-sm">
+<button class="relative aspect-video rounded-lg overflow-hidden bg-surface-container-lowest shadow-sm p-0.5 ring-2 ring-primary" onclick="switchPhoto(0, this)">
+<img class="w-full h-full object-cover rounded" data-alt="Full side profile photo of Hero Sprint 26T mountain bicycle parked under daylight, showing entire frame, saddle, and mudguards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAECczBZVPAxEfWCk5nGU7_XLctRdF2y2knOBJiYKMUPvLjbbxp98al6ege3lABTjm_Uwqj4TnVBJtl8dQDJG8KTDNafndzE4bULdx5ar-2Kxsy8gZUSv0joiIkcWoR1AjkWoPOfwHpynnKL-8zaXNPSRaPiyf0pxw7fAz5OD2QUhPmMwXuuoziLcVaeBeX0r8KPZ0bB6sT0BSA3OU1w9mlAcnYhpZwk5Z5m9C5DLr_"/>
+<span class="absolute bottom-1 left-1 bg-inverse-surface/75 text-inverse-on-surface text-[10px] font-label-caps px-1 rounded">Full Side</span>
+</button>
+<button class="relative aspect-video rounded-lg overflow-hidden bg-surface-container-lowest shadow-sm p-0.5 opacity-70 hover:opacity-100 transition-opacity" onclick="switchPhoto(1, this)">
+<img class="w-full h-full object-cover rounded" data-alt="Macro close up shot of Shimano rear derailleur gear cassette on mountain bike, clean teeth with fresh lubrication." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC78FZING9qBWJegzhF7Lpznty6uVeQGVFYwOS03ZgYT8_IbK6cT8B5G5Yaf6BHcEvRDEvIhbFmVCgAGaYBnzE_nbNMCfAiHR0-GHTvnh9kIC1m8JrHDI8N5poo6w0PjPkMCK93jrQWskXoqxx-otU5sxjnD2TMoaoe8igiS-L5n45PWTm11SjyFzJDi3Ys0RcrlG8e0eq1SJ0rfBXGYUj6tXLCkGLjheFmwgM6A4eb"/>
+<span class="absolute bottom-1 left-1 bg-inverse-surface/75 text-inverse-on-surface text-[10px] font-label-caps px-1 rounded">Gears</span>
+</button>
+<button class="relative aspect-video rounded-lg overflow-hidden bg-surface-container-lowest shadow-sm p-0.5 opacity-70 hover:opacity-100 transition-opacity" onclick="switchPhoto(2, this)">
+<img class="w-full h-full object-cover rounded" data-alt="Close up of mountain bike handlebars, ergonomic rubber grips, brake levers, and bell mount in pristine shape." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5sPVF52KlgVsn49xwojY8sGWwriW75nQK2py-4JlvyN90-VDt_9eAyW9zXPk8jRi6JwYJ66kvKmZdTaLZyBvGuPknIMY1BrxsFdTYFptukyg76icTz3qJ-asG2tH6KmYbRszxRsksfLJLpmUiwYnpTKiMBogxJZx2-bnq8zRweLu_XvG454ipv0FiEo7EmWtPB_ngWk3C9nUGPDQER0p8TyNRQGlbopjYfrhsBlAv"/>
+<span class="absolute bottom-1 left-1 bg-inverse-surface/75 text-inverse-on-surface text-[10px] font-label-caps px-1 rounded">Cockpit</span>
+</button>
+<button class="relative aspect-video rounded-lg overflow-hidden bg-surface-container-lowest shadow-sm p-0.5 opacity-70 hover:opacity-100 transition-opacity" onclick="switchPhoto(3, this)">
+<img class="w-full h-full object-cover rounded" data-alt="Campus hostel bicycle rack showing bicycle parked safely in outdoor shelter with student hostel red brick facade." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIsuSC0IKEvcBcx-A_FNsPkxmXnQ_U_w0L9CBBJy2SeV6yN7BcLHiN8fDgSV_625hKwTHDUqyqnXxvMKtU_wT6j3ylVQ85lZ-iZlGE3ecEriKSQoZdEJmMKkC8PZGTHeyDIVIgI-crOdX76m5CdZUBEsGgIZ1luZcdAmefWXxCjEemeCilOVOMUczbRu6_NOjlBME3r4mw6Ff-gBHwHnjiORns4-a7jcNNyZpfSHiL"/>
+<span class="absolute bottom-1 left-1 bg-inverse-surface/75 text-inverse-on-surface text-[10px] font-label-caps px-1 rounded">Stand</span>
+</button>
+</div>
+</div>
+<!-- Condition Inspection Report Bento -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">fact_check</span>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Campus Inspection Audit</h2>
+</div>
+<span class="font-label-caps text-label-caps bg-tertiary-fixed text-on-tertiary-fixed font-bold px-2 py-0.5 rounded">Passed Inspection</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm">
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-caps text-label-caps uppercase">
+<span class="material-symbols-outlined text-sm text-tertiary-container">check_circle</span> Tires
+            </div>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface mt-1">Hartex 26x2.10</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">~80% tread remaining</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-caps text-label-caps uppercase">
+<span class="material-symbols-outlined text-sm text-tertiary-container">check_circle</span> Chain &amp; Gears
+            </div>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface mt-1">KMC Z7 Series</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Replaced Feb 2024</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-caps text-label-caps uppercase">
+<span class="material-symbols-outlined text-sm text-tertiary-container">check_circle</span> Dual Brakes
+            </div>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface mt-1">Front/Rear V</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">New pads calibrated</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-caps text-label-caps uppercase">
+<span class="material-symbols-outlined text-sm text-tertiary-container">check_circle</span> Frame Rigid
+            </div>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface mt-1">Steel Alloy</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">No structural cracks</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant bg-surface-container-low/50 p-space-sm rounded-lg">
+<strong class="font-semibold text-on-surface">Physical Diagnostics Note:</strong> Chain shifts cleanly between front ring 1-3 and rear 6-sprocket cog. Minimal paint rub near the hostel lock shackle area. Mudguards and bottle cage stay firmly anchored.
+        </p>
+</div>
+<!-- Seller Identity & Trust Profile Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-start justify-between flex-wrap gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover" data-alt="Portrait of Arun Kumar, an Indian final year mechanical engineering student smiling outdoors on an academic tech campus wearing navy jacket." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3EwGyFVmf8Pjb_vFLm-fjSlSo0I-RWdyHsP4iHzBAyFZ_eA-Fm_Tq4f_sQ1p7GeYPfUeA6QuyUPn7RHra3RGjMYH83mihXXd3oDZEdsQSemFj41mofEgZ6_QibA6ykBePCk4I6HVYwLLQzvSvpTBamiMyF6JxKSH2tM_if7gha4BL4fUkEH3gNFs6EuQNYOhkUGDpKplCjL2A40EvaZfVVLMP1ZbfXVA-Pt3gryJp"/>
+<span class="absolute -bottom-1 -right-1 bg-tertiary-container text-on-tertiary w-5 h-5 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-xs">verified</span>
+</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">Arun Kumar</h3>
+<span class="font-label-caps text-label-caps bg-primary-fixed text-on-primary-fixed font-semibold px-2 py-0.5 rounded">Senior '24</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">B.Tech Mechanical Eng. • Brahmaputra Hostel Rm 314</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant/80">Roll No: 2020ME1082 (Active Campus ID Validated)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex flex-col items-end">
+<div class="flex items-center gap-1 text-primary font-bid-numeral-md text-bid-numeral-md">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span> 4.9
+              </div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">4 Prior Handover Sales</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center gap-1 text-primary font-label-caps text-label-caps uppercase font-bold tracking-wider">
+<span class="material-symbols-outlined text-sm">format_quote</span> Senior's Passing-Down Statement
+          </div>
+<p class="font-body-md text-body-md text-on-surface italic">
+            “Graduating next week and relocating to Bangalore for my core role. The bicycle has served me reliably between the hostel, ME labs, and the campus gate for three years. Chain and cables were serviced in February. Test ride warmly welcomed before handover at Brahmaputra quadrangle.”
+          </p>
+</div>
+<!-- Handover & Logistics Proof -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex items-start gap-space-sm p-space-sm bg-surface-container-low rounded-lg">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">location_on</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Handover Zone</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hostel 4 Ground Floor Cycle Stand / Campus SAC Complex</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm p-space-sm bg-surface-container-low rounded-lg">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">schedule</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Timeline Window</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Listed May 2 • Closes May 5, 4:30:00 PM IST Sharp</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Campus Q&A / Public Discussion Tabs -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">forum</span>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Public Inquiries &amp; Answers</h2>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant font-bold">3 Campus Questions</span>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Question 1 -->
+<div class="flex flex-col gap-2 p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="font-semibold text-on-surface">Siddharth N. (Junior B.Tech '26)</span>
+<span class="text-on-surface-variant text-xs">Yesterday, 7:15 PM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+              Does the frame accommodate taller riders? I am 5'11". Also, is the U-lock key included with the sale?
+            </p>
+<div class="ml-space-md pl-space-sm bg-surface-container-lowest rounded p-2 flex flex-col gap-1">
+<div class="flex items-center gap-1 font-label-caps text-label-caps text-primary font-bold">
+<span class="material-symbols-outlined text-xs">reply</span> Arun K. (Seller)
+              </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Yes! The seatpost has ample adjustment room; I am 6'0" and it fit comfortably. I am tossing in the Decathlon spiral cable lock and both duplicate brass keys free.
+              </p>
+</div>
+</div>
+<!-- Question 2 -->
+<div class="flex flex-col gap-2 p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="font-semibold text-on-surface">Divya R. (M.Tech '25)</span>
+<span class="text-on-surface-variant text-xs">May 3, 11:40 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+              Can I pick it up immediately if I win the auction on Sunday afternoon?
+            </p>
+<div class="ml-space-md pl-space-sm bg-surface-container-lowest rounded p-2 flex flex-col gap-1">
+<div class="flex items-center gap-1 font-label-caps text-label-caps text-primary font-bold">
+<span class="material-symbols-outlined text-xs">reply</span> Arun K. (Seller)
+              </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Absolutely. I will be at Brahmaputra Hostel all of Sunday evening until 9:00 PM for the physical inspection and UPI transfer.
+              </p>
+</div>
+</div>
+</div>
+<!-- Ask Question Input Mini-Box -->
+<div class="flex items-center gap-2 mt-2">
+<input class="flex-1 bg-surface-container-low px-space-md py-2.5 rounded-lg text-body-sm font-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest" placeholder="Ask Arun a public question regarding this item..." type="text"/>
+<button class="bg-primary text-on-primary font-label-caps text-label-caps font-semibold px-space-md py-2.5 rounded-lg hover:opacity-95 transition-opacity">
+            Post Question
+          </button>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Sticky Live Bidding Terminal (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg lg:sticky lg:top-[88px]">
+<!-- Real-Time Countdown & Status Box -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-xl flex flex-col gap-space-md relative overflow-hidden">
+<!-- Live Ribbon -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-error"></span>
+</span>
+<span class="font-label-caps text-label-caps font-bold tracking-wider text-error uppercase">Active Auction • Closing Soon</span>
+</div>
+<button class="text-xs font-label-caps text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1 bg-surface-container-low px-2 py-0.5 rounded" onclick="simulateSnipeTest()">
+<span class="material-symbols-outlined text-xs">smart_toy</span> Test Anti-Snipe
+          </button>
+</div>
+<!-- Big Countdown Clock -->
+<div class="flex items-center justify-between bg-surface-container-low p-space-md rounded-xl">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Official Remaining Window</span>
+<div class="font-timer-display text-[36px] leading-tight font-extrabold text-on-surface tracking-tight mt-0.5" id="countdownTimer">
+              00:12:35
+            </div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Closes Today at 4:30:00 PM IST</span>
+</div>
+<div class="flex flex-col items-end justify-center text-right">
+<span class="material-symbols-outlined text-3xl text-primary animate-pulse">timer</span>
+<span class="font-timer-display text-xs text-on-surface-variant font-bold">IST SYNCHRONIZED</span>
+</div>
+</div>
+<!-- Financial State Grid -->
+<div class="grid grid-cols-2 gap-space-sm bg-surface-container-low/40 p-space-md rounded-xl">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Current Leading Bid</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-bid-numeral-lg text-bid-numeral-lg text-primary">₹</span>
+<span class="font-bid-numeral-lg text-bid-numeral-lg text-primary" id="currentLeadingDisplay">1,450</span>
+</div>
+<span class="font-body-sm text-body-sm text-tertiary-container font-semibold flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-sm">person</span> Vikram S. leading
+            </span>
+</div>
+<div class="flex flex-col justify-between items-end text-right">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Reserve Status</span>
+<div class="flex items-center justify-end gap-1 mt-1 text-tertiary-container font-label-caps text-label-caps font-bold">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> Reserve Met
+              </div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Starting Baseline</span>
+<span class="font-timer-display text-xs text-on-surface-variant">₹1,000 (Kunal D.)</span>
+</div>
+</div>
+</div>
+<!-- Bid Configuration Form -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-headline-sm text-headline-sm font-bold text-on-surface" for="bidInput">Your Next Bid</label>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Min. Increment: <strong class="text-on-surface">₹50</strong></span>
+</div>
+<!-- Input with Currency Affix -->
+<div class="relative flex items-center bg-surface-container-low rounded-lg focus-within:bg-surface-container-lowest focus-within:ring-2 focus-within:ring-primary transition-all">
+<span class="font-bid-numeral-md text-bid-numeral-md text-on-surface-variant pl-space-md select-none">₹</span>
+<input class="w-full bg-transparent font-bid-numeral-lg text-bid-numeral-lg text-on-surface py-2.5 px-2 focus:outline-none" id="bidInput" min="1500" step="50" type="number" value="1500"/>
+<button class="px-space-sm text-on-surface-variant hover:text-on-surface" onclick="decrementBid()">
+<span class="material-symbols-outlined text-lg">remove</span>
+</button>
+<button class="pr-space-md pl-1 text-on-surface-variant hover:text-on-surface" onclick="incrementBid()">
+<span class="material-symbols-outlined text-lg">add</span>
+</button>
+</div>
+<!-- Quick Increment Stepper Pills -->
+<div class="grid grid-cols-3 gap-2">
+<button class="bg-surface-container-low hover:bg-secondary-container text-on-secondary-fixed font-timer-display text-xs py-2 px-1 rounded-lg transition-colors font-semibold flex items-center justify-center gap-1" onclick="applyQuickIncrement(50)">
+<span>+ ₹50</span>
+</button>
+<button class="bg-surface-container-low hover:bg-secondary-container text-on-secondary-fixed font-timer-display text-xs py-2 px-1 rounded-lg transition-colors font-semibold flex items-center justify-center gap-1" onclick="applyQuickIncrement(100)">
+<span>+ ₹100</span>
+</button>
+<button class="bg-surface-container-low hover:bg-secondary-container text-on-secondary-fixed font-timer-display text-xs py-2 px-1 rounded-lg transition-colors font-semibold flex items-center justify-center gap-1" onclick="applyQuickIncrement(250)">
+<span>+ ₹250</span>
+</button>
+</div>
+<!-- Main CTA Buttons -->
+<button class="w-full bg-primary-container hover:opacity-95 text-on-primary font-headline-sm text-body-lg font-bold py-3.5 px-space-md rounded-lg shadow-sm transition-transform active:scale-[0.99] flex items-center justify-center gap-2 mt-1" id="mainBidActionBtn" onclick="openBidConfirmModal()">
+<span class="material-symbols-outlined text-xl">gavel</span>
+<span id="bidBtnText">Place Bid (₹1,500)</span>
+</button>
+<button class="w-full bg-surface-container-low hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm font-semibold py-2.5 px-space-md rounded-lg transition-colors flex items-center justify-center gap-2" id="watchlistBtn" onclick="toggleWatchlist()">
+<span class="material-symbols-outlined text-base" id="watchlistStar">bookmark_border</span>
+<span id="watchlistLabel">Watchlist (14 students watching)</span>
+</button>
+</div>
+<!-- Fair-Play Anti-Sniping Rule Box -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5">policy</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-sm font-bold text-on-surface">Campus Anti-Sniping Guard</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+              Any bid submitted within the final 30 seconds automatically resets the remaining countdown clock to 60 seconds to guarantee fair chance.
+            </span>
+</div>
+</div>
+</div>
+<!-- Live Bidding Ladder & Audit Log -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">history</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Live Bidding Ladder</h3>
+</div>
+<span class="font-timer-display text-xs bg-secondary-container text-on-secondary-fixed font-bold px-2 py-0.5 rounded-full" id="totalBidsBadge">4 Bids</span>
+</div>
+<!-- Bid Rows Strip -->
+<div class="flex flex-col gap-2" id="bidHistoryStream">
+<!-- Row 1: Leading -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-bold text-xs">
+                VS
+              </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-body-sm text-body-sm font-bold text-on-surface">Vikram S.</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Civil '25</span>
+</div>
+<span class="font-timer-display text-[11px] text-on-surface-variant">Today, 4:17:25 PM</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-bid-numeral-md text-bid-numeral-md text-primary font-bold">₹1,450</span>
+<span class="font-label-caps text-[10px] bg-tertiary-fixed text-on-tertiary-fixed font-bold px-1.5 py-0.2 rounded uppercase">Leading</span>
+</div>
+</div>
+<!-- Row 2: Outbid -->
+<div class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low/50 transition-colors">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold text-xs">
+                RM
+              </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Rohan M.</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">CSE '26</span>
+</div>
+<span class="font-timer-display text-[11px] text-on-surface-variant">Today, 4:14:10 PM</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-bid-numeral-md text-bid-numeral-md text-on-surface-variant line-through">₹1,400</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant">Outbid</span>
+</div>
+</div>
+<!-- Row 3: Outbid -->
+<div class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low/50 transition-colors">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold text-xs">
+                AP
+              </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Aditya P.</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">EE '25</span>
+</div>
+<span class="font-timer-display text-[11px] text-on-surface-variant">Today, 3:45:00 PM</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-bid-numeral-md text-bid-numeral-md text-on-surface-variant line-through">₹1,250</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant">Outbid</span>
+</div>
+</div>
+<!-- Row 4: Starting -->
+<div class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low/50 transition-colors">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold text-xs">
+                KD
+              </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Kunal D.</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">ME '24</span>
+</div>
+<span class="font-timer-display text-[11px] text-on-surface-variant">Today, 2:10:00 PM</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-bid-numeral-md text-bid-numeral-md text-on-surface-variant">₹1,000</span>
+<span class="font-label-caps text-[10px] bg-secondary-fixed text-on-secondary-fixed px-1.5 py-0.2 rounded uppercase">Starting</span>
+</div>
+</div>
+</div>
+<!-- Privacy & Hall-Mark Notice -->
+<div class="flex items-center justify-between text-xs text-on-surface-variant pt-2">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">lock</span> Full roll numbers hidden for student privacy
+          </span>
+<a class="font-label-caps text-label-caps text-primary hover:underline" href="#">Full Log Download</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Bid Confirmation Modal Overlay (Controlled by JS) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/60 backdrop-blur-sm p-space-md" id="bidConfirmModal">
+<div class="bg-surface-container-lowest rounded-xl max-w-md w-full p-space-lg shadow-xl flex flex-col gap-space-md animate-in fade-in zoom-in-95 duration-200">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">gavel</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">Confirm Binding Bid</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Campus Verified Auction Contract</span>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="closeBidConfirmModal()">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-on-surface-variant">Item:</span>
+<span class="font-semibold text-on-surface">Hero Sprint 26T MTB</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-on-surface-variant">Seller:</span>
+<span class="font-semibold text-on-surface">Arun Kumar (Senior ME '24)</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-on-surface-variant">Current Leader:</span>
+<span class="font-timer-display text-on-surface">₹1,450 (Vikram S.)</span>
+</div>
+<div class="flex justify-between items-center pt-2 border-t border-outline-variant/30">
+<span class="font-bold text-on-surface">Your Proposed Bid:</span>
+<span class="font-bid-numeral-lg text-bid-numeral-lg text-primary font-bold" id="modalProposedBidAmount">₹1,500</span>
+</div>
+</div>
+<!-- Campus Agreement Checkbox -->
+<label class="flex items-start gap-space-sm cursor-pointer select-none">
+<input checked="" class="mt-1 accent-primary" id="modalAgreementCheck" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+          I pledge to honor this bid. If I hold the winning bid at 4:30 PM IST, I agree to complete inspection and payment at Brahmaputra Hostel within 24 hours.
+        </span>
+</label>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-sm pt-2">
+<button class="flex-1 bg-surface-container-low hover:bg-surface-container text-on-surface font-headline-sm text-headline-sm font-semibold py-2.5 rounded-lg transition-colors" onclick="closeBidConfirmModal()">
+          Go Back
+        </button>
+<button class="flex-1 bg-primary text-on-primary font-headline-sm text-headline-sm font-bold py-2.5 rounded-lg hover:opacity-95 transition-opacity flex items-center justify-center gap-1 shadow-sm" onclick="commitSubmittedBid()">
+<span class="material-symbols-outlined text-base">check</span>
+          Confirm Bid
+        </button>
+</div>
+</div>
+</div>
+<script>
+    // Live Countdown Simulation
+    let totalSecondsRemaining = 12 * 60 + 35;
+    const countdownEl = document.getElementById('countdownTimer');
+    const bidInputEl = document.getElementById('bidInput');
+    const bidBtnTextEl = document.getElementById('bidBtnText');
+    const fairPlayAlert = document.getElementById('fairPlayAlert');
+
+    function updateCountdownDisplay() {
+      const minutes = Math.floor(totalSecondsRemaining / 60);
+      const seconds = totalSecondsRemaining % 60;
+      const hours = Math.floor(minutes / 60);
+      const remMin = minutes % 60;
+      countdownEl.innerText = `${String(hours).padStart(2, '0')}:${String(remMin).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    }
+
+    const timerInterval = setInterval(() => {
+      if (totalSecondsRemaining > 0) {
+        totalSecondsRemaining--;
+        updateCountdownDisplay();
+      }
+    }, 1000);
+
+    // Bid Input Synchronization
+    bidInputEl.addEventListener('input', (e) => {
+      const val = parseInt(e.target.value, 10) || 1500;
+      bidBtnTextEl.innerText = `Place Bid (₹${val.toLocaleString('en-IN')})`;
+    });
+
+    function incrementBid() {
+      let currentVal = parseInt(bidInputEl.value, 10) || 1500;
+      currentVal += 50;
+      bidInputEl.value = currentVal;
+      bidBtnTextEl.innerText = `Place Bid (₹${currentVal.toLocaleString('en-IN')})`;
+    }
+
+    function decrementBid() {
+      let currentVal = parseInt(bidInputEl.value, 10) || 1500;
+      if (currentVal > 1500) {
+        currentVal -= 50;
+        bidInputEl.value = currentVal;
+        bidBtnTextEl.innerText = `Place Bid (₹${currentVal.toLocaleString('en-IN')})`;
+      }
+    }
+
+    function applyQuickIncrement(amount) {
+      let currentVal = parseInt(bidInputEl.value, 10) || 1500;
+      currentVal += amount;
+      bidInputEl.value = currentVal;
+      bidBtnTextEl.innerText = `Place Bid (₹${currentVal.toLocaleString('en-IN')})`;
+    }
+
+    // Modal Control
+    function openBidConfirmModal() {
+      const currentVal = parseInt(bidInputEl.value, 10) || 1500;
+      document.getElementById('modalProposedBidAmount').innerText = `₹${currentVal.toLocaleString('en-IN')}`;
+      document.getElementById('bidConfirmModal').classList.remove('hidden');
+    }
+
+    function closeBidConfirmModal() {
+      document.getElementById('bidConfirmModal').classList.add('hidden');
+    }
+
+    function commitSubmittedBid() {
+      const check = document.getElementById('modalAgreementCheck');
+      if (!check.checked) {
+        alert("Please confirm your student honor pledge to place this bid.");
+        return;
+      }
+      const submittedAmount = parseInt(bidInputEl.value, 10) || 1500;
+      
+      // Update displayed leader
+      document.getElementById('currentLeadingDisplay').innerText = submittedAmount.toLocaleString('en-IN');
+      
+      // Insert new top row to history
+      const historyContainer = document.getElementById('bidHistoryStream');
+      const newRow = document.createElement('div');
+      newRow.className = "flex items-center justify-between p-space-sm rounded-lg bg-secondary-container/40 transition-colors border-l-4 border-primary";
+      newRow.innerHTML = `
+        <div class="flex items-center gap-space-sm">
+          <div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xs">
+            YOU
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1.5">
+              <span class="font-body-sm text-body-sm font-bold text-on-surface">Rohan S. (You)</span>
+              <span class="font-label-caps text-label-caps text-on-surface-variant">B.Tech '24</span>
+            </div>
+            <span class="font-timer-display text-[11px] text-on-surface-variant">Just now</span>
+          </div>
+        </div>
+        <div class="flex flex-col items-end">
+          <span class="font-bid-numeral-md text-bid-numeral-md text-primary font-bold">₹${submittedAmount.toLocaleString('en-IN')}</span>
+          <span class="font-label-caps text-[10px] bg-tertiary-fixed text-on-tertiary-fixed font-bold px-1.5 py-0.2 rounded uppercase">You Lead</span>
+        </div>
+      `;
+      historyContainer.insertBefore(newRow, historyContainer.firstChild);
+
+      // Increment Total bids badge
+      document.getElementById('totalBidsBadge').innerText = "5 Bids";
+
+      // Reset next bid input
+      const nextSuggested = submittedAmount + 50;
+      bidInputEl.value = nextSuggested;
+      bidBtnTextEl.innerText = `Place Bid (₹${nextSuggested.toLocaleString('en-IN')})`;
+
+      closeBidConfirmModal();
+
+      // If under 30 seconds, trigger anti-snipe logic
+      if (totalSecondsRemaining <= 45) {
+        totalSecondsRemaining = 60;
+        updateCountdownDisplay();
+        fairPlayAlert.classList.remove('hidden');
+      }
+    }
+
+    // Anti-Snipe Simulation Button Test
+    function simulateSnipeTest() {
+      totalSecondsRemaining = 25;
+      updateCountdownDisplay();
+      setTimeout(() => {
+        totalSecondsRemaining = 60;
+        updateCountdownDisplay();
+        fairPlayAlert.classList.remove('hidden');
+      }, 1000);
+    }
+
+    function dismissAntiSnipe() {
+      fairPlayAlert.classList.add('hidden');
+    }
+
+    // Watchlist Toggle
+    let isWatching = false;
+    function toggleWatchlist() {
+      isWatching = !isWatching;
+      const star = document.getElementById('watchlistStar');
+      const label = document.getElementById('watchlistLabel');
+      if (isWatching) {
+        star.innerText = "bookmark";
+        star.style.fontVariationSettings = "'FILL' 1";
+        star.classList.add("text-primary");
+        label.innerText = "Saved to Watchlist (15 students watching)";
+      } else {
+        star.innerText = "bookmark_border";
+        star.style.fontVariationSettings = "'FILL' 0";
+        star.classList.remove("text-primary");
+        label.innerText = "Watchlist (14 students watching)";
+      }
+    }
+
+    // Photo Switcher Logic
+    function switchPhoto(index, el) {
+      const photos = [
+        "Full side profile photo of Hero Sprint 26T mountain bicycle parked under daylight, showing entire frame, saddle, and mudguards.",
+        "Macro close up shot of Shimano rear derailleur gear cassette on mountain bike, clean teeth with fresh lubrication.",
+        "Close up of mountain bike handlebars, ergonomic rubber grips, brake levers, and bell mount in pristine shape.",
+        "Campus hostel bicycle rack showing bicycle parked safely in outdoor shelter with student hostel red brick facade."
+      ];
+      const mainImg = document.getElementById('mainGalleryImage');
+      mainImg.setAttribute('data-alt', photos[index]);
+      
+      // Update thumbnail active ring
+      const siblings = el.parentElement.children;
+      for (let btn of siblings) {
+        btn.classList.remove('ring-2', 'ring-primary', 'opacity-100');
+        btn.classList.add('opacity-70');
+      }
+      el.classList.add('ring-2', 'ring-primary', 'opacity-100');
+      el.classList.remove('opacity-70');
+    }
+  </script>
+</div></main></div></body></html>

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-error":"#ffffff","tertiary-fixed":"#85f8c4","tertiary":"#00442d","on-error-container":"#93000a","primary-fixed-dim":"#c3c0ff","surface-tint":"#5148d7","on-primary-fixed-variant":"#372abf","primary":"#2a14b4","surface-container-low":"#eff4ff","on-surface-variant":"#464554","on-tertiary-fixed":"#002114","outline-variant":"#c7c4d7","surface-container-lowest":"#ffffff","on-tertiary":"#ffffff","on-secondary-fixed-variant":"#3f465c","inverse-surface":"#213145","on-secondary-container":"#5c647a","surface":"#f8f9ff","tertiary-container":"#005e40","secondary-fixed-dim":"#bec6e0","surface-container-high":"#dce9ff","on-background":"#0b1c30","on-primary-container":"#c1beff","surface-container-highest":"#d3e4fe","secondary-fixed":"#dae2fd","on-tertiary-container":"#66daa8","primary-container":"#4338ca","surface-bright":"#f8f9ff","on-primary-fixed":"#100069","surface-dim":"#cbdbf5","on-tertiary-fixed-variant":"#005137","on-surface":"#0b1c30","inverse-on-surface":"#eaf1ff","error-container":"#ffdad6","background":"#f8f9ff","secondary-container":"#dae2fd","on-secondary":"#ffffff","outline":"#777586","error":"#ba1a1a","surface-container":"#e5eeff","surface-variant":"#d3e4fe","on-primary":"#ffffff","primary-fixed":"#e3dfff","inverse-primary":"#c3c0ff","on-secondary-fixed":"#131b2e","tertiary-fixed-dim":"#68dba9","secondary":"#565e74"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-md":"1rem","space-lg":"1.5rem","space-xl":"2.5rem","margin-desktop":"3rem","margin":"1rem","gutter":"1.25rem","gutter-desktop":"2rem","space-sm":"0.5rem","space-xs":"0.25rem"},fontFamily:{"bid-numeral-lg":["JetBrains Mono"],"body-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"timer-display":["JetBrains Mono"],"display-lg-mobile":["Plus Jakarta Sans"],"label-caps":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"bid-numeral-md":["JetBrains Mono"],"headline-xl":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"]},fontSize:{"bid-numeral-lg":["28px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["15px",{"lineHeight":"22px","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"timer-display":["14px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-lg-mobile":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"800"}],"label-caps":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"700"}],"headline-xl-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"display-lg":["44px",{"lineHeight":"52px","letterSpacing":"-0.03em","fontWeight":"800"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"bid-numeral-md":["18px",{"lineHeight":"22px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-[68px] bg-surface-container-lowest z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-space-md lg:px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm min-w-[240px]"><img alt="Campus Auction Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WmTRQheuLZhejcdh1u0Rznffh09fF09dc4AzWw1Uk3aLVHkuu6mmZGqOp0UzAzjBTpmW5e-iV068XESYAj5yAP2jVjD_RqRt_hXyDZJeFFPlszQmOw0VsaTMuitB0J3JWAN1RM8J476ERTPGRaV7sLo9imsy5ZM62tneuww4hOAE9qh7f9WT8IzmtR7kb284p6-xyfL_0fujvu_1olrN5RlTU7ERsWdH6zm69_Tx9R"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight font-bold">Campus Auction</span><span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">IIT / NIT Campus Hub</span></div></div><div class="flex-1 max-w-2xl hidden md:flex items-center"><div class="w-full flex items-center bg-surface-container-low rounded-lg px-space-sm py-1.5 focus-within:bg-surface-container-lowest transition-colors"><span class="material-symbols-outlined text-on-surface-variant text-xl mr-space-xs">search</span><input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none" placeholder="Find something for your campus... (cycles, calculators, books)" type="text"/><div class="flex items-center gap-1 pl-space-xs border-l border-outline-variant/30"><button class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface flex items-center gap-0.5 px-space-xs py-0.5 rounded"><span class="font-medium">All</span><span class="material-symbols-outlined text-sm">expand_more</span></button></div></div></div><div class="flex items-center gap-space-md justify-end"><div class="hidden xl:flex items-center gap-1.5 bg-secondary-container/60 px-space-sm py-1 rounded-full text-on-secondary-fixed"><span class="material-symbols-outlined text-primary text-base font-bold">verified</span><span class="font-label-caps text-label-caps font-semibold">Verified Member</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 bg-error text-on-error font-timer-display text-[10px] rounded-full flex items-center justify-center font-bold leading-none">3</span></button><a class="hidden sm:flex items-center gap-1.5 bg-primary-container text-on-primary font-headline-sm text-body-sm font-semibold px-space-md py-2 rounded-lg hover:opacity-95 transition-opacity shadow-sm" data-path="list-item" href="15-create-auction-listing.html"><span class="material-symbols-outlined text-lg leading-none">add</span><span>List an Item</span></a><div class="flex items-center gap-space-xs pl-space-xs cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABN9lhbKiE4bRMwKIzGlZE7jQ3pIqAiWsq0adriDxqACzKONcj7950ii5Wi82O79yS2nhc_iyq8bd_nSFAAqIFNAacCzDHGPigrcHsNSgUujSPSGI95Z3xlEJkEMOfwFa3VsniAN9T6QXJf0iw2CNFJ40IA2cIJXFjtdXARKsFPD7jh1vb_x-aajwhdhZ60-Pt24ldYsxHj0H0ChVrduOlmR13LrF87yJfCZ2zK8tu"/><div class="hidden lg:flex flex-col text-left"><span class="font-headline-sm text-body-sm font-semibold text-on-surface leading-tight">Rohan S.</span><span class="font-label-caps text-label-caps text-on-surface-variant">B.Tech '24</span></div><span class="material-symbols-outlined text-on-surface-variant text-base">expand_more</span></div></div></header><aside class="fixed left-0 top-[68px] bottom-0 w-[260px] bg-surface-container-lowest z-40 flex flex-col py-space-md overflow-y-auto"><div class="px-space-md pb-space-sm"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Main Navigation</span></div><nav class="px-space-sm flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="discover" href="02-discover-marketplace.html"><span>Discover / Home</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="browse-auctions" href="01-live-auction-hero-sprint-bicycle.html"><span>Browse Auctions</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="my-bids" href="04-my-bids.html"><span>My Bids</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="my-watchlist" href="05-my-watchlist.html"><span>My Watchlist</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="saved-searches" href="06-saved-searches.html"><span>Saved Searches</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="ai-assistant" href="07-ai-assistant.html"><span>AI Assistant</span></a></nav><div class="px-space-md pt-space-lg pb-space-sm"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Seller Hub</span></div><nav class="px-space-sm flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="my-listings" href="09-my-listings.html"><span>My Listings</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="seller-decisions" href="08-seller-decisions.html"><span>Seller Decisions</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="questions-and-answers" href="10-questions-and-answers.html"><span>Questions &amp; Answers</span></a></nav><div class="px-space-md pt-space-lg pb-space-sm"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Account &amp; Admin</span></div><nav class="px-space-sm flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="notifications" href="11-notifications.html"><span>Notifications</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-sm text-body-sm" data-path="profile-and-trust" href="12-profile-and-trust.html"><span>Profile &amp; Trust</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-2 rounded-lg transition-colors bg-primary-container text-on-primary font-semibold" data-path="admin-moderation" href="13-admin-moderation.html"><span>Admin Moderation</span></a></nav></aside><div class="pl-[260px]"><main class="relative pt-[68px] min-h-screen bg-surface px-space-md lg:px-gutter-desktop py-space-lg"><div class="flex flex-col w-full">
+<!-- Top Utility Bar: Operational Status & Audit Snapshot -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-lg">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-label-caps text-label-caps uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+          Live Session • Active Term 2024-Autumn
+        </span>
+<span class="text-on-surface-variant font-label-caps text-label-caps">IIT/NIT Joint Council Auth</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-bold">
+        Campus Moderation &amp; Fair-Play Desk
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl mt-1">
+        IIT / NIT Student Council moderation dashboard. Review reported items, inspect suspicious last-minute bidding patterns, and ensure campus safety.
+      </p>
+</div>
+<!-- Quick Emergency Switch / Mode State -->
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-colors font-headline-sm text-body-sm font-semibold" onclick="toggleBroadcastModal(true)">
+<span class="material-symbols-outlined text-lg text-primary">campaign</span>
+<span>Broadcast Notice</span>
+</button>
+<div class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-tertiary text-lg font-bold">verified_user</span>
+<span class="font-timer-display text-body-sm text-on-surface font-semibold">Node #04 (SAC Server)</span>
+</div>
+</div>
+</div>
+<!-- Metric Overview Cards -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter mb-space-xl">
+<!-- Metric 1: Pending Reports -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-9xl text-error">report_problem</span>
+</div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Queue Priority</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-caps text-label-caps font-bold">
+          High SLA
+        </span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-bid-numeral-lg text-bid-numeral-lg font-bold text-error">3</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Urgent Reports</span>
+</div>
+<div class="mt-space-sm flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Avg response: 18m</span>
+<span class="text-error font-medium flex items-center gap-0.5">
+<span class="material-symbols-outlined text-sm">north_east</span>
+          +1 from hostel 7
+        </span>
+</div>
+</div>
+<!-- Metric 2: Shill Bidding Audits -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-9xl text-primary">analytics</span>
+</div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Velocity Heuristics</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-caps text-label-caps font-semibold">
+          AI Sentinel
+        </span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-bid-numeral-lg text-bid-numeral-lg font-bold text-primary">2</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Flagged Audits</span>
+</div>
+<div class="mt-space-sm flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Colocated IPs detected</span>
+<span class="text-primary font-medium">Wing B Audits</span>
+</div>
+</div>
+<!-- Metric 3: Resolved Disputes -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-9xl text-tertiary">gavel</span>
+</div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Term Settlement</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-caps text-label-caps">
+          Semester '24
+        </span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-bid-numeral-lg text-bid-numeral-lg font-bold text-on-surface">48</span>
+<span class="font-headline-sm text-headline-sm text-on-surface-variant font-medium">Mediated</span>
+</div>
+<div class="mt-space-sm flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>100% Escrow released</span>
+<span class="text-tertiary font-medium">0 Dean escalations</span>
+</div>
+</div>
+<!-- Metric 4: Platform Trust Health -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Campus Integrity</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-label-caps text-label-caps font-bold">
+          Council Verified
+        </span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-baseline gap-1">
+<span class="font-bid-numeral-lg text-bid-numeral-lg font-bold text-tertiary">99.2%</span>
+</div>
+<!-- Micro Trust Donut -->
+<svg class="w-12 h-12 -mr-1" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-tertiary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="99.2, 100" stroke-linecap="round" stroke-width="3.5"></path>
+<text class="font-timer-display fill-current text-on-surface" font-size="8" font-weight="700" text-anchor="middle" x="18" y="20.5">99%</text>
+</svg>
+</div>
+<div class="mt-space-sm flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Flagged user delta: -14%</span>
+<span class="text-tertiary font-semibold">Exemplary</span>
+</div>
+</div>
+</section>
+<!-- Main Moderation Workbench: Filter Tabs + 2-Column Split (Cards & Quick Controls) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter-desktop">
+<!-- Left Column (Primary Moderation Cards Stream) -->
+<div class="xl:col-span-8 flex flex-col gap-space-lg">
+<!-- Filter Tabs Strip -->
+<div class="p-1.5 rounded-xl bg-surface-container-low shadow-inner flex items-center gap-1 overflow-x-auto text-on-surface-variant">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-lowest text-primary shadow-sm font-headline-sm text-body-sm font-bold flex items-center gap-2 whitespace-nowrap">
+<span>Reported Listings</span>
+<span class="w-5 h-5 rounded-full bg-error text-on-error font-timer-display text-[11px] flex items-center justify-center font-bold">2</span>
+</button>
+<button class="px-space-md py-2 rounded-lg hover:bg-surface-container-lowest/60 text-on-surface-variant hover:text-on-surface transition-colors font-headline-sm text-body-sm font-medium flex items-center gap-2 whitespace-nowrap">
+<span>Flagged Q&amp;A Inquiries</span>
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-timer-display text-[11px] flex items-center justify-center font-semibold">1</span>
+</button>
+<button class="px-space-md py-2 rounded-lg hover:bg-surface-container-lowest/60 text-on-surface-variant hover:text-on-surface transition-colors font-headline-sm text-body-sm font-medium flex items-center gap-2 whitespace-nowrap">
+<span>Suspicious Bidding Audits</span>
+<span class="w-5 h-5 rounded-full bg-primary-container text-on-primary font-timer-display text-[11px] flex items-center justify-center font-semibold">1</span>
+</button>
+<button class="px-space-md py-2 rounded-lg hover:bg-surface-container-lowest/60 text-on-surface-variant hover:text-on-surface transition-colors font-headline-sm text-body-sm font-medium flex items-center gap-2 whitespace-nowrap">
+<span>Escrow Disputes</span>
+<span class="w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-timer-display text-[11px] flex items-center justify-center font-semibold">1</span>
+</button>
+<button class="px-space-md py-2 rounded-lg hover:bg-surface-container-lowest/60 text-on-surface-variant hover:text-on-surface transition-colors font-headline-sm text-body-sm font-medium whitespace-nowrap">
+<span>Resolved History</span>
+</button>
+</div>
+<!-- Card 1: Reported Listing Review (High Priority Hostel Appliance Violation) -->
+<article class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md relative overflow-hidden transition-all hover:shadow-md">
+<!-- Visual Priority Accent Bar -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-error"></div>
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm pl-space-xs">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">electric_bolt</span>
+</div>
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-timer-display text-label-caps text-on-surface-variant bg-surface-container-low px-2 py-0.5 rounded font-semibold">#AUC-2024-0519</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-caps text-label-caps font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">warning</span>
+                  Hostel Code Violation
+                </span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">• Reported 24 mins ago</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface mt-1">
+                Unbranded Electric Induction Cooktop
+              </h2>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-low px-3 py-1.5 rounded-lg shrink-0">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Listing Status:</span>
+<span class="font-headline-sm text-body-sm text-error font-bold">Held for Review</span>
+</div>
+</div>
+<!-- Investigation Dossier Body -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md pl-space-xs">
+<!-- Thumbnail & Product Details -->
+<div class="md:col-span-4 rounded-lg bg-surface-container-low p-space-sm flex flex-col gap-2">
+<div class="w-full h-36 rounded bg-surface-container-high overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Close up photograph of a suspicious unbranded hotplate electrical appliance with heavy coil wiring and coiled metallic ring sitting on a dorm desk, high contrast campus dorm photo with cool toned fluorescent lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-fFKY33d01RMZCjrukmOawVViTqtUUZi0KwTDTGWLJ3fYzARnzztHZu-87BqA5mRevhO4moEWOZszuNFN5mjiKXapa9YEAGUnQnXUTD07Da7kjiAjiDC3pPmnU2gwzxe1RF48CXU2YUEzlAdGzfpbYS8NoQq37qRsJcdn6M6_RKIUHS1IxJ-JF0pQ6ZkME2IMqoSqBVRtJs6cCWVr8M2Y0wS31dULHu9JWaW54gxu"/>
+<div class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-inverse-surface/80 text-inverse-on-surface font-timer-display text-body-sm font-semibold">
+                Declared: 1200W
+              </div>
+</div>
+<div class="flex flex-col text-on-surface-variant font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface">Declared Reserve: ₹450</span>
+<span>Listed by: <strong class="text-on-surface">Anonymous Junior</strong></span>
+<span class="font-timer-display text-[12px]">Roll: 2023ME1011 (Hostel 7, Room 314)</span>
+</div>
+</div>
+<!-- Infraction Narrative & Witnesses -->
+<div class="md:col-span-8 flex flex-col justify-between gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider font-bold">Report Reason &amp; Submissions:</span>
+<p class="font-body-md text-body-md text-on-surface">
+                “Banned Hostel Appliance / High-wattage exposed nichrome wire heater disguised under ceramic induction plate. Poses electrical tripping and fire risk in Wing C.”
+              </p>
+<div class="flex items-center gap-2 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-base text-error">flag</span>
+<span>Flagged by: <strong class="text-on-surface">Prof. K. Verma (Hostel 7 Warden)</strong> &amp; 2 Verified Student Residents</span>
+</div>
+</div>
+<!-- Historical Discipline Note -->
+<div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-container-high/60 text-on-secondary-fixed">
+<span class="material-symbols-outlined text-base text-primary">history_edu</span>
+<span class="font-body-sm text-body-sm">Seller has clean record (0 prior notices). Council code authorizes warning + item surrender.</span>
+</div>
+</div>
+</div>
+<!-- Action Panel -->
+<div class="pt-space-sm flex flex-wrap items-center justify-between gap-space-sm pl-space-xs">
+<div class="flex items-center gap-2">
+<button class="px-space-md py-2 rounded-lg bg-error text-on-error font-headline-sm text-body-sm font-semibold hover:opacity-95 transition-opacity flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-lg">block</span>
+<span>Remove Listing &amp; Notify Student</span>
+</button>
+<button class="px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline-sm text-body-sm font-semibold transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-lg">add_a_photo</span>
+<span>Request Photo Verification</span>
+</button>
+</div>
+<button class="px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors font-headline-sm text-body-sm font-medium">
+            Dismiss Report (Permitted Device)
+          </button>
+</div>
+</article>
+<!-- Card 2: Shill Bidding & Suspicious Velocity Audit (Live Algorithmic Anomaly) -->
+<article class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md relative overflow-hidden transition-all hover:shadow-md">
+<!-- Visual Accent Bar -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm pl-space-xs">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">troubleshoot</span>
+</div>
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-timer-display text-label-caps text-on-surface-variant bg-surface-container-low px-2 py-0.5 rounded font-semibold">#AUC-2024-0498</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-caps text-label-caps font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary">hub</span>
+                  Velocity Shill Alert
+                </span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">• Detected 4 mins ago</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface mt-1">
+                Apple iPad 9th Gen 64GB (Space Grey + Pencil)
+              </h2>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Live Top Bid</span>
+<span class="font-bid-numeral-lg text-bid-numeral-lg font-bold text-primary">₹18,500</span>
+</div>
+</div>
+<!-- Anomaly Deep Dive Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md pl-space-xs">
+<!-- Bid Escalation Spark Graph / Velocity Chart -->
+<div class="md:col-span-5 p-space-sm rounded-lg bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant font-semibold">Bidding Spike (3m Window)</span>
+<span class="font-timer-display text-body-sm text-error font-bold">+54.1% jump</span>
+</div>
+<!-- Inline SVG Velocity Chart -->
+<div class="w-full h-24 flex items-end">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 240 70">
+<defs>
+<lineargradient id="gradientAudit" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#4338ca" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#4338ca" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<path d="M 0 55 Q 30 54 60 50 T 120 48 T 160 30 T 190 12 L 235 4" fill="none" stroke="#2a14b4" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M 0 55 Q 30 54 60 50 T 120 48 T 160 30 T 190 12 L 235 4 L 235 70 L 0 70 Z" fill="url(#gradientAudit)"></path>
+<!-- Points of ping-pong bids -->
+<circle class="fill-primary" cx="160" cy="30" r="3.5"></circle>
+<circle class="fill-error" cx="190" cy="12" r="3.5"></circle>
+<circle class="fill-error" cx="235" cy="4" r="4.5"></circle>
+</svg>
+</div>
+<div class="flex justify-between font-timer-display text-[11px] text-on-surface-variant mt-1">
+<span>17:40 (₹12,000)</span>
+<span>17:41</span>
+<span>17:42</span>
+<span class="text-error font-bold">17:43 (₹18,500)</span>
+</div>
+</div>
+<!-- Forensic Evidence List -->
+<div class="md:col-span-7 flex flex-col justify-between gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center gap-1.5 text-error font-headline-sm text-body-sm font-bold">
+<span class="material-symbols-outlined text-lg">wifi_tethering</span>
+<span>Flag Reason: Reciprocal Colocated Shill Bidding</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+                Rapid reciprocal bids between roommates in same hostel wing: 
+                <span class="font-timer-display text-body-sm font-semibold bg-surface-container px-1 py-0.5 rounded">Hostel Nilgiri Room B-12</span>
+                and 
+                <span class="font-timer-display text-body-sm font-semibold bg-surface-container px-1 py-0.5 rounded">Room B-14</span> 
+                on campus Wi-Fi AP <strong class="text-on-surface">#NIL-AP-08</strong>.
+              </p>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm mt-1">
+<span class="material-symbols-outlined text-base text-primary">smart_toy</span>
+<span>AI Anti-Sniping pattern detector flagged 4 consecutive self-inflating increments in 180 seconds.</span>
+</div>
+</div>
+<!-- Ping Pong Bid Log -->
+<div class="grid grid-cols-2 gap-2 font-timer-display text-[12px]">
+<div class="p-2 rounded bg-surface-container-high/50 flex justify-between items-center">
+<span>Bidder A (Roll ..402):</span>
+<span class="font-bold text-on-surface">₹16,500</span>
+</div>
+<div class="p-2 rounded bg-surface-container-high/50 flex justify-between items-center">
+<span>Bidder B (Roll ..409):</span>
+<span class="font-bold text-on-surface">₹18,500</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Moderation Controls -->
+<div class="pt-space-sm flex flex-wrap items-center justify-between gap-space-sm pl-space-xs">
+<div class="flex items-center gap-2">
+<button class="px-space-md py-2 rounded-lg bg-primary-container text-on-primary font-headline-sm text-body-sm font-semibold hover:opacity-95 transition-opacity flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-lg">pause_circle</span>
+<span>Freeze Auction &amp; Invalidate Suspicious Bids</span>
+</button>
+<button class="px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline-sm text-body-sm font-semibold transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-lg">forward_to_inbox</span>
+<span>Contact Both Students for Verification</span>
+</button>
+</div>
+<button class="px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors font-headline-sm text-body-sm font-medium">
+            Clear Flag (Genuine Escalation)
+          </button>
+</div>
+</article>
+<!-- Card 3: Handover Dispute & Inspection Discrepancy (Physical SAC Mediation) -->
+<article class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md relative overflow-hidden transition-all hover:shadow-md">
+<!-- Visual Accent Bar -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm pl-space-xs">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary-container text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">directions_bike</span>
+</div>
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-timer-display text-label-caps text-on-surface-variant bg-surface-container-low px-2 py-0.5 rounded font-semibold">#ESCROW-8912</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-caps text-label-caps font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary">lock_clock</span>
+                  Mediation Open • Token On Hold
+                </span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">• Reported Today at 15:30</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface mt-1">
+                Hero Octane 21-Speed Mountain Cycle (Matte Black)
+              </h2>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-low px-3 py-1.5 rounded-lg shrink-0">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Escrow Vault:</span>
+<span class="font-timer-display text-bid-numeral-md font-bold text-on-surface">₹4,200 Locked</span>
+</div>
+</div>
+<!-- Discrepancy Parties and Breakdown -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md pl-space-xs">
+<!-- Buyer vs Seller Cards -->
+<div class="md:col-span-4 flex flex-col gap-2">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<div class="flex items-center justify-between text-body-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Buyer</span>
+<span class="font-timer-display text-[11px] text-tertiary font-bold">Token Held</span>
+</div>
+<span class="font-headline-sm text-body-sm font-bold text-on-surface mt-0.5">Harsh P.</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">B.Tech '26 • CSE Dept</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<div class="flex items-center justify-between text-body-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Seller</span>
+<span class="font-timer-display text-[11px] text-error font-bold">Unreleased</span>
+</div>
+<span class="font-headline-sm text-body-sm font-bold text-on-surface mt-0.5">Rohit V.</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">Dual '24 • Mechanical</span>
+</div>
+</div>
+<!-- Dispute Statement & Handover Location -->
+<div class="md:col-span-8 flex flex-col justify-between gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-2">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold tracking-wider">Field Inspection Incident:</span>
+<p class="font-body-md text-body-md text-on-surface">
+                “Buyer reports Shimano gear derailleur is bent and rear wheel rubs brake pads upon physical trial run outside Student Activity Center (SAC). Listing specified ‘Mint condition, zero repairs needed’. Seller declined transaction cancellation.”
+              </p>
+<!-- Evidence Micro Gallery -->
+<div class="flex items-center gap-space-sm mt-1">
+<div class="w-16 h-16 rounded bg-surface-container-high overflow-hidden relative border-0">
+<img class="w-full h-full object-cover" data-alt="Close up inspection photo of a bent metallic bicycle derailleur with greasy bike chain on outdoor campus pavement, detailed macro shot showing mechanical misalignment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4C19S6KhP2vqGRXnvRemO806aUHx0xlQKexLpr13c6w83vPdgjCNiY8YbYrZn6Y3XGzDs3Kn7hW_w2p01RegFd2LB933FuCfxrVjaT_X91HlTGfJXB0qzdUr1XL9ZQW6ji0AqZyUsg0eYvrxoH9UeXJ25bvwbCF_vCV1HQSt6t5WARfHJkOgtRwFTCg73QMCke-gMEGwEUij9N1oB_mm0XApf6QWgorTBD_TkzmIT"/>
+</div>
+<div class="flex flex-col text-body-sm">
+<span class="font-medium text-on-surface">Photo Evidence Submitted (1 photo)</span>
+<span class="text-on-surface-variant text-[12px]">Location: SAC Quad Bike Stand • Verified GPS Match</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-base text-primary">schedule</span>
+<span>Mediation deadline: <strong>23h 14m remaining</strong> before automated escrow refund.</span>
+</div>
+</div>
+</div>
+<!-- Resolution Controls -->
+<div class="pt-space-sm flex flex-wrap items-center justify-between gap-space-sm pl-space-xs">
+<div class="flex items-center gap-2">
+<button class="px-space-md py-2 rounded-lg bg-primary-container text-on-primary font-headline-sm text-body-sm font-semibold hover:opacity-95 transition-opacity flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-lg">assignment_return</span>
+<span>Release Return &amp; Cancel Sale</span>
+</button>
+<button class="px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline-sm text-body-sm font-semibold transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-lg">balance</span>
+<span>Award Settlement (₹800 Repair Credit)</span>
+</button>
+</div>
+<button class="px-space-md py-2 rounded-lg text-primary hover:bg-surface-container-low transition-colors font-headline-sm text-body-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-base">meeting_room</span>
+<span>Schedule SAC Council In-Person Hearing</span>
+</button>
+</div>
+</article>
+</div>
+<!-- Right Column (Sidebar Controls & Quick Administrative Action Hub) -->
+<div class="xl:col-span-4 flex flex-col gap-space-lg">
+<!-- Quick Moderator Dispatch Card -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">admin_panel_settings</span>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">Council Quick Desk</h3>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Direct enforcement actions authenticated under the Student Honor Code &amp; Hall of Residence Council Constitution.
+        </p>
+<!-- Tool 1: Restrict / Ban User Action -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-body-sm font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-error text-base">person_off</span>
+              Restrict User Bidding
+            </span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">7-Day Cooldown</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<input class="w-full bg-surface-container-lowest font-body-sm text-body-sm text-on-surface px-3 py-2 rounded-lg placeholder:text-on-surface-variant/70 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" placeholder="Roll # or Campus Email (e.g., 2022CS1044)" type="text"/>
+<select class="w-full bg-surface-container-lowest font-body-sm text-body-sm text-on-surface px-3 py-2 rounded-lg focus:outline-none shadow-sm">
+<option>Reason: Shill Bidding Manipulation</option>
+<option>Reason: Hostel Banned Appliance Listing</option>
+<option>Reason: In-Person SAC No-Show / Breach</option>
+<option>Reason: Abusive Q&amp;A Behavior</option>
+</select>
+</div>
+<button class="w-full py-2 px-space-md rounded-lg bg-surface-container-high hover:bg-error-container hover:text-on-error-container text-on-surface font-headline-sm text-body-sm font-semibold transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-base">gavel</span>
+<span>Issue 7-Day Marketplace Suspension</span>
+</button>
+</div>
+<!-- Tool 2: Broadcast Fair-Play Notice -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-2">
+<span class="font-headline-sm text-body-sm font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-base">podium</span>
+            Campus Fair-Play Bulletin
+          </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Push an urgent banner to all active bidding screens regarding semester cycle rules or handover protocol.
+          </p>
+<button class="w-full py-2 px-space-md rounded-lg bg-primary-container text-on-primary font-headline-sm text-body-sm font-semibold hover:opacity-95 transition-opacity flex items-center justify-center gap-1.5 shadow-sm" onclick="toggleBroadcastModal(true)">
+<span class="material-symbols-outlined text-base">campaign</span>
+<span>Draft Fair-Play Announcement</span>
+</button>
+</div>
+<!-- Tool 3: Compliance Download / Export Logs -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-2">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold">Records &amp; Audit Trail</span>
+<div class="flex items-center gap-2">
+<button class="flex-1 py-1.5 px-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-headline-sm text-body-sm font-semibold transition-colors flex items-center justify-center gap-1 shadow-sm" onclick="simulateExport('CSV')">
+<span class="material-symbols-outlined text-base text-primary">download</span>
+<span>CSV Log</span>
+</button>
+<button class="flex-1 py-1.5 px-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-headline-sm text-body-sm font-semibold transition-colors flex items-center justify-center gap-1 shadow-sm" onclick="simulateExport('JSON')">
+<span class="material-symbols-outlined text-base text-tertiary">data_object</span>
+<span>JSON Proof</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Live Council Activity Log (Mini Ticker) -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-1">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-base">history</span>
+<span>Real-time Council Ledger</span>
+</h3>
+<span class="font-label-caps text-label-caps text-tertiary uppercase font-bold">Live Stream</span>
+</div>
+<div class="flex flex-col gap-2.5 font-body-sm text-body-sm">
+<div class="p-2 rounded bg-surface-container-low flex items-start gap-2">
+<span class="material-symbols-outlined text-base text-tertiary mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Lab Oscilloscope dispute settled</span>
+<span class="text-on-surface-variant font-timer-display text-[11px]">14:10 • Escrow ₹6,500 transferred to EE Dept Buyer</span>
+</div>
+</div>
+<div class="p-2 rounded bg-surface-container-low flex items-start gap-2">
+<span class="material-symbols-outlined text-base text-error mt-0.5">delete_forever</span>
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Banned coil heater listing purged</span>
+<span class="text-on-surface-variant font-timer-display text-[11px]">11:45 • Hostel 3 Proctor verified</span>
+</div>
+</div>
+<div class="p-2 rounded bg-surface-container-low flex items-start gap-2">
+<span class="material-symbols-outlined text-base text-primary mt-0.5">security_update_good</span>
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Anti-Sniping algorithm updated</span>
+<span class="text-on-surface-variant font-timer-display text-[11px]">09:12 • Strict 30s bid extension threshold active</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Institutional Safety Guidelines Callout -->
+<div class="p-space-md rounded-xl bg-primary text-on-primary flex flex-col gap-2 shadow-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xl">gavel</span>
+<span class="font-headline-sm text-body-sm font-bold">SAC Disciplinary Protocol</span>
+</div>
+<p class="font-body-sm text-body-sm opacity-90 leading-relaxed">
+          Council moderators are empowered under Statute 14-B. Violations involving prohibited electronics or deliberate shill bidding are forwarded to the Dean of Student Affairs (DoSA) if unresolved within 48 hours.
+        </p>
+<div class="pt-1 flex items-center justify-between text-[12px] opacity-80 font-timer-display">
+<span>DoSA Liaison: Dr. S. Rao</span>
+<span>Emergency Ext: 4490</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Micro-interaction / Broadcast Modal (Hidden by Default) -->
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm z-50 flex items-center justify-center p-space-md hidden transition-all" id="broadcastModal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-xl p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">campaign</span>
+</div>
+<h4 class="font-headline-md text-headline-md font-bold text-on-surface">Campus Fair-Play Broadcast</h4>
+</div>
+<button class="p-1 rounded hover:bg-surface-container-low text-on-surface-variant" onclick="toggleBroadcastModal(false)">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        This banner will appear immediately at the top of all ongoing auction pages across IIT / NIT student dashboards.
+      </p>
+<div class="flex flex-col gap-space-sm">
+<div>
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold mb-1 block">Notice Headline</label>
+<input class="w-full bg-surface-container-low font-body-sm text-body-sm text-on-surface px-3 py-2 rounded-lg focus:outline-none shadow-sm" id="broadcastTitle" type="text" value="Reminder: End-of-Semester Handover Verification at SAC Only"/>
+</div>
+<div>
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold mb-1 block">Message Body</label>
+<textarea class="w-full bg-surface-container-low font-body-sm text-body-sm text-on-surface px-3 py-2 rounded-lg focus:outline-none shadow-sm resize-none" id="broadcastBody" rows="3">Ensure cycles and electronics are inspected on-site before releasing the escrow handover code. Do not exchange cash outside the verified platform.</textarea>
+</div>
+<div class="flex items-center gap-2">
+<input checked="" class="w-4 h-4 rounded text-primary" id="urgentTick" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface font-medium" for="urgentTick">Pin as Priority Alert across all hostel wings</label>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low font-headline-sm text-body-sm font-semibold" onclick="toggleBroadcastModal(false)">
+          Cancel
+        </button>
+<button class="px-space-md py-2 rounded-lg bg-primary-container text-on-primary hover:opacity-95 font-headline-sm text-body-sm font-semibold shadow-sm" onclick="submitBroadcast()">
+          Publish Broadcast
+        </button>
+</div>
+</div>
+</div>
+<!-- Notification Toast -->
+<div class="fixed bottom-6 right-6 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none bg-inverse-surface text-inverse-on-surface px-space-md py-3 rounded-xl shadow-lg flex items-center gap-2 z-50" id="toastNotification">
+<span class="material-symbols-outlined text-tertiary-fixed text-lg">check_circle</span>
+<span class="font-body-sm text-body-sm font-medium" id="toastMessage">Action logged successfully.</span>
+</div>
+<!-- Interactive JavaScript Engine -->
+<script>
+    function toggleBroadcastModal(show) {
+      const modal = document.getElementById('broadcastModal');
+      if (show) {
+        modal.classList.remove('hidden');
+      } else {
+        modal.classList.add('hidden');
+      }
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toastNotification');
+      const text = document.getElementById('toastMessage');
+      text.textContent = message;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 3200);
+    }
+
+    function submitBroadcast() {
+      const title = document.getElementById('broadcastTitle').value;
+      toggleBroadcastModal(false);
+      showToast('Broadcast published: "' + title.substring(0, 30) + '..."');
+    }
+
+    function simulateExport(format) {
+      showToast('Exporting council audit trail in ' + format + ' format...');
+      setTimeout(() => {
+        showToast('Audit report ready. Download started.');
+      }, 1200);
+    }
+  </script>
+</div></main></div></body></html>
